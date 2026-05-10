@@ -24,5 +24,14 @@
             <a href="Specializations.php?$action=add" class="btn-add">Add Specialization</a>
         <?php } ?>
     </div>
+    <?php if($action == "add"){?>
+        <div class = "add_form">
+            <p class ="form-title">Add New Specilization</p>
+            <form method = "post" action="">
+                <input type="hidden" name = "action" value = "create">
+            </form>
+        </div>
+    <?php } ?>
+
 </body>
 </html>
