@@ -15,5 +15,14 @@
         </ul>
         <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
     </nav>
+    <div class ="page-toprow">
+        <div>
+            <h1 class="title">Specializations</h1>
+            <p class="subtitle">Manage medical specializations for doctor profiles</p>
+        </div>
+        <?php if($action != "add" && $action != "edit"){ ?>
+            <a href="Specializations.php?$action=add" class="btn-add">Add Specialization</a>
+        <?php } ?>
+    </div>
 </body>
 </html>
