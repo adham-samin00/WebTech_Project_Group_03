@@ -13,6 +13,7 @@
             <li><a href="Specializations.php">Specialization</a></li>
             <li><a href="AdminDoctorDashboard.php">Doctors</a></li>
         </ul>
+        <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
     </nav>
 </body>
 </html>
