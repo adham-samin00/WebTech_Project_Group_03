@@ -29,6 +29,14 @@
             <p class ="form-title">Add New Specilization</p>
             <form method = "post" action="">
                 <input type="hidden" name = "action" value = "create">
+                <div class="form-group">
+                    <label for="name">Specilization Name</label>
+                    <input type="text" id = "name" name = "name" placeholder = "e.g. Cardiology" required>
+                </div>
+                <div class = "form-actions">
+                    <input type="submit" class="btn-add" value ="Save">
+                    <a href="Specilizations.php" class="btn-cancel-link">Cancel</a>
+                </div>
             </form>
         </div>
     <?php } ?>
