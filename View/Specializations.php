@@ -30,6 +30,9 @@
             <a href="Specializations.php?action=add" class="btn-add">Add Specialization</a>
         <?php } ?>
     </div>
+    <?php if(!empty($error)){ ?>
+        <div class = "error-alert"><?php echo $error ?></div>
+    <?php } ?>
     <?php if($action == "add"){?>
         <div class = "add_form">
             <p class ="form-title">Add New Specilization</p>
@@ -83,7 +86,7 @@
                 <td><? $sp["specilization"] ?></td>
                 <td>
                     <div class = "action-buttons">
-                        <a href="Specilizations.php?action=edit&id= <?php echo $sp["id"] ?>&data=<?php echo $sp["specilization"] ?>" class = "btn-edit">Edit</a>
+                        <a href="Specializations.php?action=edit&id= <?php echo $sp["id"] ?>&data=<?php echo $sp["specilization"] ?>" class = "btn-edit">Edit</a>
                         <a href="../Controller/SpecilizationController.php?action=delete&id=<?php echo $Sp["id"] ?>&data=<?php echo $sp["specilization"] ?>" class = "btn-delete" onclick ="return confirm('Are you Sure?');" >Delete</a>
                     </div>
                 </td>
