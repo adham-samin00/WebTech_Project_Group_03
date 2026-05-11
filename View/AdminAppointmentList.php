@@ -87,6 +87,38 @@ include "../Controller/AdminAppointmentController.php";
                     <?php echo $appt["status"] ?>
                 </span>
             </td>
+            <td id="actions_<?php echo $appt["id"] ?>">
+                <?php if ($appt["status"] == "Pending") { ?>
+                    <!-- Admin can Confirm a Pending appointment -->
+                    <button class="btn btn-confirm"
+                            onclick="ConfirmAppointment(<?php echo $appt["id"] ?>)">
+                        Confirm
+                    </button>
+                    <!-- Cancel with reason -->
+                    <div class="cancel-box">
+                        <textarea id="cancel_reason_<?php echo $appt["id"] ?>"
+                                  placeholder="Cancel reason..."></textarea>
+                        <button class="btn btn-cancel"
+                                onclick="CancelAppointment(<?php echo $appt["id"] ?>)">
+                            Cancel
+                        </button>
+                    </div>
+
+                <?php } elseif ($appt["status"] == "Confirmed") { ?>
+                <!-- Admin can still cancel a confirmed appointment -->
+                    <div class="cancel-box">
+                        <textarea id="cancel_reason_<?php echo $appt["id"] ?>"
+                                  placeholder="Cancel reason..."></textarea>
+                        <button class="btn btn-cancel"
+                                onclick="CancelAppointment(<?php echo $appt["id"] ?>)">
+                            Cancel
+                        </button>
+                    </div>
+
+                <?php } else { ?>
+                    <span class="done-text"><?php echo $appt["status"] ?></span>
+                <?php } ?>
+            </td>
         </tr>
     </table>
 

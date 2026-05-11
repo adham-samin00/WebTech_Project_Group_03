@@ -13,4 +13,11 @@
         $result = $connection->query($sql);
         return $result;
     }
+
+    function getDoctorIdByUserId($connection,$user_id) {
+        
+        $sql = "SELECT id FROM doctors WHERE user_id = '" . $user_id . "'";
+        $result = $connection->query($sql);
+        return $result;
+    }
 ?>
