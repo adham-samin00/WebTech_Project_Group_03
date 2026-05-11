@@ -17,6 +17,12 @@
         </ul>
         <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
     </nav>
+    <div class = "page-wrapper">
+        <div class = "page-top">
+            <h1 class = "title">Doctor Management</h1>
+            <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
+        </div>
+    </div>
 <body>
     
 </body>
