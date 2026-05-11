@@ -8,6 +8,10 @@
             <a href="BrowseDoctors.php">Browse Doctors</a>
             <a href="MyAppointment.php">My Appointment</a>
 </div> 
+<div class="page-wrap">
+    <h1>Find a Doctor</h1>
+
+</div>
 
 
 
