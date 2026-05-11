@@ -72,7 +72,7 @@
         $Specializations = getAllSpecializations();
     ?>
 
-    <div class = "table-wraper">
+    <table class = "table-wraper">
         <thead>
             <tr>
                 <th>ID</th>
@@ -81,9 +81,10 @@
             </tr>
         </thead>
         <tbody>
+            <?php $i = 1; ?>
             <?php foreach ($Specializations as $sp){ ?>
                 <tr>
-                    <td><?= $sp["id"] ?></td>
+                    <td><?= $i++ ?></td>
                     <td><?= $sp["name"] ?></td>
                     <td>
                         <div class = "action-buttons">
@@ -93,7 +94,14 @@
                     </td>
                 </tr>
             <?php } ?>
+            <?php
+                if($i == 1){
+                    echo "<tr>
+                        <td>No Specialization Found!!</td>
+                    </tr>";
+                } 
+            ?>
         </tbody>
-    </div>
+    </table>
 </body>
 </html>

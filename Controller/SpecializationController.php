@@ -7,7 +7,7 @@
    $error = "";
    $datafile = "../JSON/Specialization.json";
    $id = "";
-   $edit_id = $_GET["id"];
+   $edit_id = $_GET["id"]??"";
    if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $post_action = $_POST["action"] ?? "";
@@ -69,6 +69,15 @@
             }
             else{
                 $result = deleteSpecialization($edit_id);
+                if ($result)
+                    {
+                        Header("Location: ../View/Specializations.php?success=deleted");
+                        exit();
+                    }
+                else
+                    {
+                        $error = "Could not delete specialization.";
+                    }
             }
         }
 ?>

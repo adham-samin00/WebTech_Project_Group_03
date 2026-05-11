@@ -31,7 +31,8 @@
         return $result;
     }
     function deleteSpecialization($id)
-    {
+    {   $database   = new db();
+        $connection = $database->connection();
         $sql = "DELETE FROM specializations WHERE id = '".$id."'";
         $result = $connection->query($sql);
         return $result;
