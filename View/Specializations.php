@@ -65,7 +65,7 @@
     <?php } ?>
 
     <?php
-        require_once("../Model/db.php");
+        //require_once("../Model/db.php");
         $specilizations = getSpecilizations();
     ?>
 
