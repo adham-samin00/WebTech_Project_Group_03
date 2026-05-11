@@ -15,7 +15,7 @@ include "../Controller/DoctorDashboardController.php";
             <a href="DoctorDashboard.php">Today</a>
             <a href="WeeklySchedule.php">Weekly Schedule</a>
         </div>
-        
+        <a href="../Controller/Logout.php">Logout</a>
     </div>
 </div>
 
