@@ -41,7 +41,7 @@
                 </div>
                 <div class = "form-actions">
                     <input type="submit" class="btn-add" value ="Save">
-                    <a href="Specilizations.php" class="btn-cancel-link">Cancel</a>
+                    <a href="Specializations.php" class="btn-cancel-link">Cancel</a>
                 </div>
             </form>
         </div>
@@ -65,8 +65,8 @@
     <?php } ?>
 
     <?php
-        //require_once("../Model/db.php");
-        $specilizations = getSpecilizations();
+        require_once("../Model/Specilizationdb.php");
+        $specilizations = getAllSpecializations();
     ?>
 
     <div class = "table-wraper">
@@ -90,11 +90,5 @@
             <?php } ?>
         </tbody>
     </div>
-
-
-
-
-
-
 </body>
 </html>
