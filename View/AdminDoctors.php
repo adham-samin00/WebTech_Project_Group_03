@@ -34,7 +34,11 @@
         <?php if (!empty($error)) { ?>
             <div class="alert alert-error"><?php echo $error; ?></div>
         <?php } ?>
-    
+
+        <?php
+            $weekdays = ["Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+        ?>
+        
 
     </div>
 <body>
