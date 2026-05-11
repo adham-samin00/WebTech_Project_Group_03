@@ -22,6 +22,20 @@
             <h1 class = "title">Doctor Management</h1>
             <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
         </div>
+        <?php if (isset($_GET["success"])) {
+            $msgs = [
+                "created" => "Doctor added successfully.",
+                "updated" => "Doctor profile updated.",
+                "deleted" => "Doctor account deactivated."
+            ];
+            $msg = $msgs[$_GET["success"]] ?? "";
+            if ($msg) echo "<div class='alert alert-success'>$msg</div>";
+        } ?>
+        <?php if (!empty($error)) { ?>
+            <div class="alert alert-error"><?php echo $error; ?></div>
+        <?php } ?>
+    
+
     </div>
 <body>
     
