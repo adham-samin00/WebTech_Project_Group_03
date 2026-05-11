@@ -7,6 +7,7 @@
    $error = "";
    $datafile = "../JSON/Specialization.json";
    $id = "";
+   $edit_id = $_GET["id"];
    if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $post_action = $_POST["action"] ?? "";
@@ -57,8 +58,17 @@
                     {
                         $error = "Could not create updated. Name may already exist.";
                     }
-                
             }
         }
     }
+    if($action == "delete" && $edit_id)
+        {
+            $hasDoctor = specializationHasDoctors($edit_id);
+            if($hasDoctor->num_rows > 0){
+                $error = "Cannot Delete: doctors are assigned to this specialization.";
+            }
+            else{
+                $result = deleteSpecialization($edit_id);
+            }
+        }
 ?>

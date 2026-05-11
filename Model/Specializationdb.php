@@ -22,4 +22,11 @@
         $result = $connection->query($sql);
         return $result;
     }
+    function specializationHasDoctors($specialization_id)
+    {
+        $database   = new db();
+        $connection = $database->connection();
+        $sql = "SELECT id FROM doctors WHERE specialization_id = '".$specialization_id."'";
+        return $result;
+    }
 ?>

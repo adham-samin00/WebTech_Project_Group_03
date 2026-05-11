@@ -82,14 +82,16 @@
         </thead>
         <tbody>
             <?php foreach ($Specializations as $sp){ ?>
-                <td><?= $sp["id"] ?></td>
-                <td><?= $sp["name"] ?></td>
-                <td>
-                    <div class = "action-buttons">
-                        <a href="Specializations.php?action=edit&id= <?php echo $sp["id"] ?>&data=<?php echo $sp["name"] ?>" class = "btn-edit">Edit</a>
-                        <a href="../Controller/SpecializationController.php?action=delete&id=<?php echo $sp["id"] ?>&data=<?php echo $sp["name"] ?>" class = "btn-delete" onclick ="return confirm('Are you Sure?');" >Delete</a>
-                    </div>
-                </td>
+                <tr>
+                    <td><?= $sp["id"] ?></td>
+                    <td><?= $sp["name"] ?></td>
+                    <td>
+                        <div class = "action-buttons">
+                            <a href="Specializations.php?action=edit&id= <?php echo $sp["id"] ?>&data=<?php echo $sp["name"] ?>" class = "btn-edit">Edit</a>
+                            <a href="../Controller/SpecializationController.php?action=delete&id=<?php echo $sp["id"] ?>&data=<?php echo $sp["name"] ?>" class = "btn-delete" onclick ="return confirm('Are you Sure?');" >Delete</a>
+                        </div>
+                    </td>
+                </tr>
             <?php } ?>
         </tbody>
     </div>
