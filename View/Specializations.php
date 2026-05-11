@@ -70,7 +70,13 @@
     ?>
 
     <div class = "table-wraper">
-        
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Specilization</th>
+                <th>Action</th>
+            </tr>
+        </thead>
     </div>
 
 
