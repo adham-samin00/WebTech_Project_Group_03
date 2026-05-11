@@ -1,3 +1,6 @@
+<?php
+include "../Controller/AdminAppointmentController.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,6 +55,44 @@
             </div>
         </div>
     </form>
+
+    <p id="msg"></p>
+
+    <?php if (count($all_appointments) == 0) { ?>
+        <div class="no-data">No appointments found for the selected filters.</div>
+    <?php } else  ?>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Reason</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        <?php foreach ($all_appointments as $appt) { ?>
+        <tr>
+            td><?php echo $appt["id"] ?></td>
+            <td><?php echo $appt["patient_name"] ?></td>
+            <td><?php echo $appt["doctor_name"] ?></td>
+            <td><?php echo $appt["appointment_date"] ?></td>
+            <td><?php echo $appt["appointment_time"] ?></td>
+            <td><?php echo $appt["reason"] ?></td>
+            <td>
+                <span id="badge_<?php echo $appt["id"] ?>"
+                      class="badge badge-<?php echo strtolower(str_replace("-", "", $appt["status"])) ?>">
+                    <?php echo $appt["status"] ?>
+                </span>
+            </td>
+        </tr>
+    </table>
+
+
+
+    <?php } ?>
 
 </div>
 </body>
