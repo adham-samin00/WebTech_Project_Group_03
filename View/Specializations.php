@@ -30,6 +30,13 @@
             <a href="Specializations.php?action=add" class="btn-add">Add Specialization</a>
         <?php } ?>
     </div>
+
+    <?php if (isset($_GET["success"])) {
+        $msgs = ["created" => "Specialization created successfully.", "updated" => "Specialization updated.", "deleted" => "Specialization deleted."];
+        $msg  = $msgs[$_GET["success"]] ?? "";
+        if ($msg) echo "<div class='alert alert-success'>$msg</div>";
+    } ?>
+
     <?php if(!empty($error)){ ?>
         <div class = "error-alert"><?php echo $error ?></div>
     <?php } ?>
