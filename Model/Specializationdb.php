@@ -27,6 +27,14 @@
         $database   = new db();
         $connection = $database->connection();
         $sql = "SELECT id FROM doctors WHERE specialization_id = '".$specialization_id."'";
+        $result = $connection->query($sql);
         return $result;
     }
+    function deleteSpecialization($id)
+    {
+        $sql = "DELETE FROM specializations WHERE id = '".$id."'";
+        $result = $connection->query($sql);
+        return $result;
+    }
+
 ?>
