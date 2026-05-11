@@ -32,7 +32,7 @@
                 file_put_contents($datafile,$jsondata);
                 
             if($post_action == "create"){
-                //$result = 
+                $result = $database->createSpecialization($name);
             }
         }
     }
