@@ -14,6 +14,22 @@
             $error = "Specialization name must be at least 3 characters.";
         }
         else{
+            $formdata = array("Specialization" => name);
+            if(file_exist($datafile))
+                {
+                    $existdata = file_get_contents($datafile);
+                    $tempdata = json_encode($existdata,true);
+                }
+                else{
+                    $tempdata = array();
+                }
+            if(!is_array($tempdata))
+                {
+                    $tempdata = array();
+                }
+                $tempdata[] = $formdata;
+                $jsondata = json_encode($tempdata,JSON_PRETTY_PRINT);
+                file_put_contents($datafile,$jsondata);
                 
             if($post_action == "create"){
                 //$result = 
