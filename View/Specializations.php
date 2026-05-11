@@ -1,3 +1,9 @@
+<?php
+    include "../Controller/SpecilizationController.php";
+    $action= $_GET["action"] ?? "list";
+    $edit_id = &_GET["edit_id"]??"";
+    $edit_data = $_GET["edit_data"]??"";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +27,7 @@
             <p class="subtitle">Manage medical specializations for doctor profiles</p>
         </div>
         <?php if($action != "add" && $action != "edit"){ ?>
-            <a href="Specializations.php?$action=add" class="btn-add">Add Specialization</a>
+            <a href="Specializations.php?action=add" class="btn-add">Add Specialization</a>
         <?php } ?>
     </div>
     <?php if($action == "add"){?>
@@ -40,6 +46,37 @@
             </form>
         </div>
     <?php } ?>
+    <?php if($action == "edit" && $edit_id){?>
+        <div class = "add_form">
+            <p class ="form-title">Edit Specilization</p>
+            <form method = "post" action="">
+                <input type="hidden" name = "action" value = "update">
+                <input type="hidden" name = "id" value = "<?php echo $edit_id ?>">
+                <div class="form-group">
+                    <label for="name">Specilization Name</label>
+                    <input type="text" id = "name" name = "name" value = "<?php echo $edit_data ?>" required>
+                </div>
+                <div class = "form-actions">
+                    <input type="submit" class="btn-add" value ="Update">
+                    <a href="Specilizations.php" class="btn-cancel-link">Cancel</a>
+                </div>
+            </form>
+        </div>
+    <?php } ?>
+
+    <?php
+        require_once("../Model/db.php");
+        //$specilizations = getSpecilizations();
+    ?>
+
+    <div class = "table-wraper">
+        
+    </div>
+
+
+
+
+
 
 </body>
 </html>
