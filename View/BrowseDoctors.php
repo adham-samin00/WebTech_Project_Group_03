@@ -12,6 +12,18 @@
     <h1>Find a Doctor</h1>
 
 </div>
+<div class="filter-bar">
+        <label for="specialization_id">Select Specialization: </label>
+        <select id="specialization_id" name="specialization_id" onchange="FilterDoctors()">
+        <option value="">All Specializations</option>
+        <?php foreach ($specializations as $spec) { ?>
+         <option value="<?php echo $spec["id"] ?>">
+          <?php echo $spec["name"] ?>
+          </option>
+        <?php } ?>
+        </select>
+    </div>
+
 
 
 
