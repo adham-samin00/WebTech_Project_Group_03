@@ -33,6 +33,15 @@
                 
             if($post_action == "create"){
                 $result = $database->createSpecialization($name);
+                if ($result)
+                    {
+                        Header("Location: ../View/Specializations.php?success=created");
+                        exit();
+                    }
+                    else
+                    {
+                        $error = "Could not create specialization. Name may already exist.";
+                    }
             }
         }
     }
