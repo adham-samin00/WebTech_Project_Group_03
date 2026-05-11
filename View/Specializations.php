@@ -1,8 +1,8 @@
 <?php
     include "../Controller/SpecilizationController.php";
     $action= $_GET["action"] ?? "list";
-    $edit_id = &_GET["edit_id"]??"";
-    $edit_data = $_GET["edit_data"]??"";
+    $edit_id = $_GET["id"]??"";
+    $edit_data = $_GET["data"]??"";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +66,7 @@
 
     <?php
         require_once("../Model/db.php");
-        //$specilizations = getSpecilizations();
+        $specilizations = getSpecilizations();
     ?>
 
     <div class = "table-wraper">
@@ -77,6 +77,18 @@
                 <th>Action</th>
             </tr>
         </thead>
+        <tbody>
+            <?php foreach ($specilizations as $Sp){ ?>
+                <td><? $sp["id"] ?></td>
+                <td><? $sp["specilization"] ?></td>
+                <td>
+                    <div class = "action-buttons">
+                        <a href="Specilizations.php?action=edit&id= <?php echo $sp["id"] ?>&data=<?php echo $sp["specilization"] ?>" class = "btn-edit">Edit</a>
+                        <a href="../Controller/SpecilizationController.php?action=delete&id=<?php echo $Sp["id"] ?>&data=<?php echo $sp["specilization"] ?>" class = "btn-delete" onclick ="return confirm('Are you Sure?');" >Delete</a>
+                    </div>
+                </td>
+            <?php } ?>
+        </tbody>
     </div>
 
 
