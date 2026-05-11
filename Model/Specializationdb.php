@@ -15,4 +15,11 @@
         $result = $connection->query($sql);
         return $result;
     }
+    function updateSpecialization($id, $name){
+        $database   = new db();
+        $connection = $database->connection();
+        $sql = "UPDATE specializations SET name ='".$name."' WHERE id ='".$id."'";
+        $result = $connection->query($sql);
+        return $result;
+    }
 ?>

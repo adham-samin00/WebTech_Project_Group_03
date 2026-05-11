@@ -6,6 +6,7 @@
    $name = "";
    $error = "";
    $datafile = "../JSON/Specialization.json";
+   $id = "";
    if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         $post_action = $_POST["action"] ?? "";
@@ -42,6 +43,21 @@
                     {
                         $error = "Could not create specialization. Name may already exist.";
                     }
+            }
+            if($post_action == "update"){
+                $update_id = $_POST["id"];
+                echo $update_id;
+                $result = updateSpecialization($update_id,$name);
+                if($result)
+                    {
+                        Header("Location: ../View/Specializations.php?success=updated");
+                        exit();
+                    }
+                    else
+                    {
+                        $error = "Could not create updated. Name may already exist.";
+                    }
+                
             }
         }
     }
