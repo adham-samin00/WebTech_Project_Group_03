@@ -1,21 +1,21 @@
 <?php
-   include "../Model/db.php";
+   include "../Model/Specializationdb.php";
    session_start();
    $action = $_GET["action"]??"list";
-   $post_acion = "";
+   $post_action = "";
    $name = "";
    $error = "";
    $datafile = "../JSON/Specialization.json";
    if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        $post_acion = $_POST["action"] ?? "";
+        $post_action = $_POST["action"] ?? "";
         $name = trim($_POST["name"]??"");
         if(empty($name) || strlen($name) < 3){
             $error = "Specialization name must be at least 3 characters.";
         }
         else{
-            $formdata = array("Specialization" => name);
-            if(file_exist($datafile))
+            $formdata = array("Specialization" => $name);
+            if(file_exists($datafile))
                 {
                     $existdata = file_get_contents($datafile);
                     $tempdata = json_encode($existdata,true);
@@ -32,7 +32,7 @@
                 file_put_contents($datafile,$jsondata);
                 
             if($post_action == "create"){
-                $result = $database->createSpecialization($name);
+                $result = createSpecialization($name);
                 if ($result)
                     {
                         Header("Location: ../View/Specializations.php?success=created");
