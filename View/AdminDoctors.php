@@ -139,7 +139,26 @@
                             } ?>
                         </select>
                     </div>
-                    
+                        <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio"><?php echo htmlspecialchars($edit_data["bio"]); ?></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="consultation_fee">Consultation Fee (BDT)</label>
+                            <input type="number" id="consultation_fee" name="consultation_fee"
+                                value="<?php echo $edit_data["consultation_fee"]; ?>" min="1" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Profile Photo (leave blank to keep current)</label>
+                            <input type="file" id="photo" name="photo" accept="image/jpeg, image/png">
+                            <?php if (!empty($edit_data["photo_path"])) { ?>
+                                <div class="photo-preview">
+                                    <img src="<?php echo htmlspecialchars($edit_data["photo_path"]); ?>" alt="Current photo">
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
                 </form>
             </div>
         <?php } ?>
