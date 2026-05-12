@@ -1,4 +1,5 @@
 <?php
+    include "../AdminDoctorController.php"
     $action= $_GET["action"] ?? "";
     require_once("../Model/Specializationdb.php");
     $specializations = getAllSpecializations();
@@ -110,7 +111,7 @@
                 </form>
             </div>
         <?php } ?>
-        <?php if ($action == "edit" && $edit_data) {
+        <?php if ($action == "" && $edit_data) {
             $saved_days = explode(",", $edit_data["available_days"] ?? "");
         ?>
             <div class = "form-panel">
@@ -182,7 +183,86 @@
                 </form>
             </div>
         <?php } ?>
-            
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Doctor</th>
+                        <th>Specialization</th>
+                        <th>Fee (BDT)</th>
+                        <th>Available Days</th>
+                        <th>Status</th>
+                        <th>Appointments</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $i = 1;
+                    while ($row = $doctors->fetch_assoc())
+                        {
+                            $is_active  = $row["is_active"];
+                            $badge_text = $is_active ? "Active" : "Inactive";
+                            $badge_cls  = $is_active ? "active" : "inactive";
+                            $initial    = strtoupper(substr($row["name"], 0, 1));
+
+                            // Build days pills
+                            $days_str  = $row["available_days"] ?? "";
+                            $days_arr  = $days_str ? explode(",", $days_str) : [];
+                            $days_html = "";
+                            foreach ($days_arr as $d)
+                                {
+                                    $days_html .= "<span class='day-pill'>" . substr(trim($d), 0, 3) . "</span>";
+                                }
+                            if (!$days_html) $days_html = "<span style='color:var(--gray-400);font-size:0.8rem;'>None set</span>";
+
+                            // Photo or initial
+                            if (!empty($row["photo_path"]))
+                                {
+                                    $photo_html = "<img src='" . htmlspecialchars($row["photo_path"]) . "' class='doctor-photo-sm' alt=''>";
+                                }
+                            else
+                                {
+                                    $photo_html = "<span class='doctor-photo-placeholder'>$initial</span>";
+                                }
+
+                            echo "<tr>
+                                <td>$i</td>
+                                <td>
+                                    <div class='doctor-name-cell'>
+                                        $photo_html
+                                        <div>
+                                            <strong>" . htmlspecialchars($row["name"]) . "</strong><br>
+                                            <span style='font-size:0.78rem; color:var(--gray-400);'>" . htmlspecialchars($row["email"]) . "</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>" . htmlspecialchars($row["specialization"] ?? "—") . "</td>
+                                <td>" . number_format($row["consultation_fee"], 0) . "</td>
+                                <td><div class='days-pills'>$days_html</div></td>
+                                <td><span class='status-badge $badge_cls'>$badge_text</span></td>
+                                <td><span class='appt-count' id='appt-count-{$row['id']}'>...</span></td>
+                                <td>
+                                    <div class='actions-cell'>
+                                        <a href='AdminDoctors.php?action=edit&id={$row['id']}' class='btn-edit'>Edit</a>
+                                        <a href='../Controller/DoctorController.php?action=delete&id={$row['id']}'
+                                        class='btn-delete'
+                                        onclick=\"return confirm('Deactivate this doctor account?')\">Deactivate</a>
+                                    </div>
+                                </td>
+                            </tr>";
+                            $i++;
+                        }
+
+                    if ($i == 1)
+                        {
+                            echo "<tr><td>No doctors found. Add one above.</td></tr>";
+                        }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 <body>
