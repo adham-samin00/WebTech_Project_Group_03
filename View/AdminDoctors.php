@@ -71,6 +71,10 @@
                             </select>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" placeholder="Brief description of the doctor's background and expertise..."></textarea>
+                    </div>  
                 </form>
             </div>
 
