@@ -28,6 +28,7 @@
             ?>
         </select>
     </div>
+        <div>
             <p><strong>Specialization:</strong></p>
             <p><strong>Fee:</strong> </p>
           
