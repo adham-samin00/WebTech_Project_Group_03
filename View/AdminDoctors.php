@@ -207,7 +207,6 @@
                             $badge_cls  = $is_active ? "active" : "inactive";
                             $initial    = strtoupper(substr($row["name"], 0, 1));
 
-                            // Build days pills
                             $days_str  = $row["available_days"] ?? "";
                             $days_arr  = $days_str ? explode(",", $days_str) : [];
                             $days_html = "";
@@ -217,7 +216,6 @@
                                 }
                             if (!$days_html) $days_html = "<span style='color:var(--gray-400);font-size:0.8rem;'>None set</span>";
 
-                            // Photo or initial
                             if (!empty($row["photo_path"]))
                                 {
                                     $photo_html = "<img src='" . htmlspecialchars($row["photo_path"]) . "' class='doctor-photo-sm' alt=''>";
