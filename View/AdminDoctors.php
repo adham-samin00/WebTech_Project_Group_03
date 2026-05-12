@@ -159,10 +159,30 @@
                             <?php } ?>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label>Available Days</label>
+                        <div class="days-group">
+                            <?php foreach ($weekdays as $day) {
+                                $checked = in_array($day, $saved_days) ? "checked" : "";
+                            ?>
+                                <input type="checkbox" class="day-checkbox"
+                                    id="edit_day_<?php echo $day; ?>"
+                                    name="available_days[]"
+                                    value="<?php echo $day; ?>" <?php echo $checked; ?>>
+                                <label class="day-label" for="edit_day_<?php echo $day; ?>">
+                                    <?php echo substr($day, 0, 3); ?>
+                                </label>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <input type="submit" class="btn-add" value="Update Doctor">
+                        <a href="AdminDoctors.php" class="btn-cancel-link">Cancel</a>
+                    </div>
                 </form>
             </div>
         <?php } ?>
-
+            
     </div>
 
 <body>
