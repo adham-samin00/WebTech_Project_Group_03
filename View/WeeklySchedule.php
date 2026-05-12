@@ -26,6 +26,22 @@ include "../Controller/WeeklyScheduleController.php";
         &nbsp;–&nbsp;
         <?php echo date("d M Y", strtotime($week_end)) ?>
     </p>
+
+    <div class="section-title">Appointment Grid (Mon – Fri)</div>
+
+    <div class="section-title">Appointment Grid (Mon – Fri)</div>
+
+    <div class="week-grid">
+        <div class="grid-header">Time</div>
+        <?php foreach ($week_days as $day) { ?>
+            <div class="grid-header">
+                <?php echo date("D", strtotime($day)) ?><br>
+                <span style="font-size:11px; font-weight:normal;">
+                    <?php echo date("d M", strtotime($day)) ?>
+                </span>
+            </div>
+        <?php } ?>
+    </div>
 </div>
 </body>
 </html>
