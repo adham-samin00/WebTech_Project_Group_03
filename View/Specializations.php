@@ -17,7 +17,7 @@
         <ul>
             <li><a href="AdminPanel.php">Users</a></li>
             <li><a href="Specializations.php">Specialization</a></li>
-            <li><a href="AdminDoctorDashboard.php">Doctors</a></li>
+            <li><a href="AdminDoctors.php">Doctors</a></li>
         </ul>
         <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
     </nav>

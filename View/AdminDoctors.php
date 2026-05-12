@@ -1,5 +1,7 @@
 <?php
-
+    $action= $_GET["action"] ?? "add";
+    require_once("../Model/Specializationdb.php");
+    $specializations = getAllSpecializations();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +40,25 @@
         <?php
             $weekdays = ["Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
         ?>
-        
+        <?php if($action == "add"){ ?>
+            <div class = "add_form">
+                <form method="post" action="" ecntype="multipart/form-data">
+                    <input type="hidden" name = "action" value = "create">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Dr. Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="doctor@gmail.com" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        <?php } ?>
+
 
     </div>
 <body>
