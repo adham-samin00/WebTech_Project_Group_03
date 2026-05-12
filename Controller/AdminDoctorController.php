@@ -40,7 +40,20 @@
                     $error = "Please select at least one available day.";
                 }
             else{
-                
+                if($post_action == "create"){
+                    if(strlen($password) < 6){
+                        $error = "Password must be at least 6 characters.";
+                    }
+                    else{
+                        $existing = checkEmailExists($email);
+                    }
+                    if($existing->num_rows > 0){
+                        $error = "This email is already registered.";
+                    }
+                    else{
+                        
+                    }
+                }
             }
         }
     
