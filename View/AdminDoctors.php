@@ -103,7 +103,10 @@
                             <?php } ?>
                         </div>
                     </div>
-                    
+                    <div class="form-actions">
+                        <input type="submit" class="btn-add" value="Update Doctor">
+                        <a href="AdminDoctors.php" class="btn-cancel-link">Cancel</a>
+                    </div>
                 </form>
             </div>
 
