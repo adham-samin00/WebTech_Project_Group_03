@@ -54,6 +54,13 @@
                             <input type="email" id="email" name="email" placeholder="doctor@gmail.com" required>
                         </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required>
+                        </div>
+                        
+                    </div>
                 </form>
             </div>
 
