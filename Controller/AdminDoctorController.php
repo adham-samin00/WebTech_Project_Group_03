@@ -80,6 +80,28 @@
                                                 move_uploaded_file($file["tmp_name"], $photo_path);
                                             }
                                     }
+                                if (empty($error))
+                                    {
+                                        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+                                        $new_user_id   = createDoctorUser($name, $email, $password_hash);
+                                        if ($new_user_id)
+                                            {
+                                                $result = createDoctor($new_user_id, $specialization_id, $bio, $consultation_fee, $photo_path, $available_days);
+                                                if ($result)
+                                                    {
+                                                        Header("Location: ../View/AdminDoctors.php?success=created");
+                                                        exit();
+                                                    }
+                                                else
+                                                    {
+                                                        $error = "Doctor profile could not be saved.";
+                                                    }
+                                            }
+                                        else
+                                            {
+                                                $error = "Could not create doctor account.";
+                                            }
+                                    }
                             }
                 }
             }
