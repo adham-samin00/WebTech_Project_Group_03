@@ -89,6 +89,20 @@
                             <input type="file" id="photo" name="photo" accept="image/jpeg, image/png">
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label>Available Days</label>
+                        <div class="days-group">
+                            <?php foreach ($weekdays as $day) { ?>
+                                <input type="checkbox" class="day-checkbox"
+                                    id="day_<?php echo $day; ?>"
+                                    name="available_days"
+                                    value="<?php echo $day; ?>">
+                                <label class="day-label" for="day_<?php echo $day; ?>">
+                                    <?php echo substr($day, 0, 3); ?>
+                                </label>
+                            <?php } ?>
+                        </div>
+                    </div>
                     
                 </form>
             </div>
