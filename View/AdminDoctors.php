@@ -1,5 +1,5 @@
 <?php
-    $action= $_GET["action"] ?? "add";
+    $action= $_GET["action"] ?? "";
     require_once("../Model/Specializationdb.php");
     $specializations = getAllSpecializations();
 ?>
@@ -116,7 +116,19 @@
             <div class = "form-panel">
                 <div class="form-panel-title">Edit Doctor Profile</div>
                 <form method = "post" action="" enctype = "multipart/form-data">
-
+                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="doctor_id" value="<?php echo $edit_data["id"]; ?>">
+                    <input type="hidden" name="user_id" value="<?php echo $edit_data["user_id"]; ?>">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" value="<?php echo htmlspecialchars($edit_data["name"]); ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($edit_data["email"]); ?>" required>
+                        </div>
+                    </div>
                 </form>
             </div>
         <?php } ?>
