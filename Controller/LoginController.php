@@ -3,29 +3,8 @@
 include "../Model/LoginDb.php";
 session_start();
 
-$isLoggedIn = $_SESSION["loggedIn"] ?? false;
 
-if($isLoggedIn)
-    {
-        $role = $_SESSION["role"] ?? "";
-        if($role == "patient")
-            {
-                Header("Location: ../View/PatientHome.php");
-                exit();
-            }
-        elseif($role == "doctor")
-            {
-                Header("Location: ../View/DoctorDashboard.php");
-                exit();
-            }
-        elseif($role == "admin")
-            {
-                Header("Location: ../View/AdminPanel.php");
-                exit();
-            }
-    }
-
-    $error = "";
+$error = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {

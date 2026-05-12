@@ -65,10 +65,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $existing_data = json_decode($file_content, true);
                         }
                         else{
-                            $exisitng_data = array();
+                            $existing_data = array();
                         }
 
-                        if(!is_array($exisitng_data))
+                        if(!is_array($existing_data))
                             {
                                 $existing_data = array();
                             }
