@@ -59,7 +59,17 @@
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password" placeholder="Minimum 6 characters" required>
                         </div>
-                        
+                        <div class="form-group">
+                            <label for="specialization_id">Specialization</label>
+                            <select id="specialization_id" name="specialization_id" required>
+                                <option value="">-- Select Specialization --</option>
+                                <?php foreach ($specializations as $spec) { ?>
+                                    <option value="<?php echo $spec["id"]; ?>">
+                                        <?php echo htmlspecialchars($spec["name"]); ?>
+                                    </option>
+                                <?php } ?>
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>
