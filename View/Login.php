@@ -31,7 +31,7 @@ include "../Controller/LoginController.php";
             <?php } ?>
 
 
-            <form method="post" action="">
+            <form method="post" action="Login.php">
 
                 <div class="input-group">
                     <label for="email">Email Address</label>
