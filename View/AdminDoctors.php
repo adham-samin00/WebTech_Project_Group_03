@@ -23,6 +23,9 @@
         <div class = "page-top">
             <h1 class = "title">Doctor Management</h1>
             <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
+            <?php if ($action != "add" && $action != "edit") { ?>
+                <a href="AdminDoctors.php?action=add" class="btn-add">+ Add Doctor</a>
+            <?php } ?>
         </div>
         <?php if (isset($_GET["success"])) {
             $msgs = [
@@ -74,7 +77,19 @@
                     <div class="form-group">
                         <label for="bio">Bio</label>
                         <textarea id="bio" name="bio" placeholder="Brief description of the doctor's background and expertise..."></textarea>
-                    </div>  
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="consultation_fee">Consultation Fee (BDT)</label>
+                            <input type="number" id="consultation_fee" name="consultation_fee"
+                                placeholder="e.g. 800" min="1" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Profile Photo (JPEG/PNG, max 2MB)</label>
+                            <input type="file" id="photo" name="photo" accept="image/jpeg, image/png">
+                        </div>
+                    </div>
+                    
                 </form>
             </div>
 
