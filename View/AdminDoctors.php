@@ -1,8 +1,6 @@
 <?php
-    include "../AdminDoctorController.php"
+    include "../Controller/AdminDoctorController.php";
     $action= $_GET["action"] ?? "";
-    require_once("../Model/Specializationdb.php");
-    $specializations = getAllSpecializations();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +44,7 @@
         ?>
         <?php if($action == "add"){ ?>
             <div class = "add_form">
-                <form method="post" action="" ecntype="multipart/form-data">
+                <form method="post" action="" enctype="multipart/form-data">
                     <input type="hidden" name = "action" value = "create">
                     <div class="form-row">
                         <div class="form-group">
@@ -96,7 +94,7 @@
                             <?php foreach ($weekdays as $day) { ?>
                                 <input type="checkbox" class="day-checkbox"
                                     id="day_<?php echo $day; ?>"
-                                    name="available_days"
+                                    name="available_days[]"
                                     value="<?php echo $day; ?>">
                                 <label class="day-label" for="day_<?php echo $day; ?>">
                                     <?php echo substr($day, 0, 3); ?>

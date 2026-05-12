@@ -57,8 +57,9 @@
                         else
                             {
                                 $photo_path = "";
-                                if (!empty($_FILES["photo"]["name"]))
+                                if (!empty($_FILES["photo"]))
                                     {
+                                        echo "file found";
                                         $file     = $_FILES["photo"];
                                         $allowed  = ["image/jpeg", "image/png"];
                                         $max_size = 2 * 1024 * 1024;
@@ -77,8 +78,11 @@
                                                 $filename   = "doc_" . time() . "_" . uniqid() . "." . $ext;
                                                 $upload_dir = "../public/uploads/doctors/";
                                                 $photo_path = $upload_dir . $filename;
-                                                move_uploaded_file($file["tmp_name"], $photo_path);
+                                                $result = move_uploaded_file($file["tmp_name"], $photo_path);
                                             }
+                                    }
+                                    else{
+                                        $error = "File Not Found";
                                     }
                                 if (empty($error))
                                     {
@@ -106,5 +110,11 @@
                 }
             }
         }
-    
+$specializationsResult = getAllSpecializations();
+$specializations       = [];
+while ($row = $specializationsResult->fetch_assoc())
+    {
+        $specializations[] = $row;
+    }
+
 ?>
