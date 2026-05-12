@@ -82,8 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $mydata = json_decode($data);
         
 
-                    // Header("Location: ");
-                    // exit();
+                    Header("Location: Login.php?registered=1");
+                    exit();
                 }
             else{
                 $error = "Registration failed. Please try again";
