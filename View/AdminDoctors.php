@@ -129,6 +129,17 @@
                             <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($edit_data["email"]); ?>" required>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="specialization_id">Specialization</label>
+                        <select id="specialization_id" name="specialization_id" required>
+                            <option value="">-- Select Specialization --</option>
+                            <?php foreach ($specializations as $spec) {
+                                $sel = ($spec["id"] == $edit_data["specialization_id"]) ? "selected" : "";
+                                echo "<option value='{$spec['id']}' $sel>" . htmlspecialchars($spec["name"]) . "</option>";
+                            } ?>
+                        </select>
+                    </div>
+                    
                 </form>
             </div>
         <?php } ?>
