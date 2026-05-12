@@ -15,7 +15,7 @@ include "../Controller/RegistrationController.php";
 <body>
 
 <div class="topnav">
-    <a href="Login.php" class="sitename">+<span>Medi</span>Book</a>
+    <a href="Login.php" class="sitename"><span>Medi</span>Book</a>
 </div>
 
 <div class="center-box">
