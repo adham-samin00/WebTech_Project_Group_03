@@ -19,6 +19,29 @@
             $consultation_fee = floatval($_POST["consultation_fee"] ?? 0);
             $days_checked     = $_POST["available_days"] ?? [];
             $available_days   = implode(",", $days_checked);
+            if (strlen($name) < 3)
+                {
+                    $error = "Doctor name must be at least 3 characters.";
+                }
+            elseif (!filter_var($email, FILTER_VALIDATE_EMAIL))
+                {
+                    $error = "Please enter a valid email address.";
+                }
+            elseif ($specialization_id <= 0)
+                {
+                    $error = "Please select a specialization.";
+                }
+            elseif ($consultation_fee <= 0)
+                {
+                    $error = "Consultation fee must be greater than 0.";
+                }
+            elseif (empty($days_checked))
+                {
+                    $error = "Please select at least one available day.";
+                }
+            else{
+                
+            }
         }
     
 ?>
