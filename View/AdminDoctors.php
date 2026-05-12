@@ -104,16 +104,25 @@
                         </div>
                     </div>
                     <div class="form-actions">
-                        <input type="submit" class="btn-add" value="Update Doctor">
+                        <input type="submit" class="btn-add" value="Save Doctor">
                         <a href="AdminDoctors.php" class="btn-cancel-link">Cancel</a>
                     </div>
                 </form>
             </div>
+        <?php } ?>
+        <?php if ($action == "edit" && $edit_data) {
+            $saved_days = explode(",", $edit_data["available_days"] ?? "");
+        ?>
+            <div class = "form-panel">
+                <div class="form-panel-title">Edit Doctor Profile</div>
+                <form method = "post" action="" enctype = "multipart/form-data">
 
+                </form>
+            </div>
         <?php } ?>
 
-
     </div>
+
 <body>
     
 </body>
