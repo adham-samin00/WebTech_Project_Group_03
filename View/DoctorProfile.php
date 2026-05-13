@@ -23,8 +23,6 @@
 </div>
    
 <div class="main-area">
-
-    <!-- doctor info -->
     <div class="doctor-info-box">
         <?php
          if (!empty($doctor["photo_path"])) 
@@ -82,4 +80,28 @@
         </div>
 
         <h3>Select Time</h3>
+        <div class="slots-row" id="slots-area">
+            <p class="no-slots">Select a date above to see available times.</p>
+        </div>
+        <?php
+         if (!empty($next7days)) 
+            { ?>
+        <h3>Your Details</h3>
+
+        <form method="post" action="BookingConfirmation.php">
+            <input type="hidden" name="doctor_id" id="doctor_id" value="<?php echo $doctor["id"]; ?>">
+            <input type="hidden" name="date" id="selected_date" value="">
+            <input type="hidden" name="time" id="selected_time" value="">
+
+            <div class="two-col">
+                <div class="input-group">
+                    <label>Selected Date</label>
+                    <input type="text" id="show-date" placeholder="Choose a date above" readonly>
+                </div>
+                <div class="input-group">
+                    <label>Selected Time</label>
+                    <input type="text" id="show-time" placeholder="Choose a slot above" readonly>
+                </div>
+            </div>
+    
 </html>
