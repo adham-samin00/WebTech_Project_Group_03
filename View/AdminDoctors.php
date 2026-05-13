@@ -9,14 +9,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src ="../Controller/JS/getCount.js"></script>
     <title>Doctors</title>
-
 </head>
+<body>
     <nav class="navbar">
         <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
         <ul>
             <li><a href="AdminPanel.php">Users</a></li>
             <li><a href="Specializations.php">Specialization</a></li>
             <li><a href="AdminDoctors.php">Doctors</a></li>
+            <li><a href="AdminAppointments.php">Appointments</a></li>
         </ul>
         <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
     </nav>
@@ -270,8 +271,5 @@
             </table>
         </div>
     </div>
-
-<body>
-    
 </body>
 </html>

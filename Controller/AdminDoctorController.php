@@ -2,6 +2,13 @@
     include "../Model/AdminDoctorDb.php";
     session_start();
 
+    $isLoggedIn = $_SESSION["loggedIn"] ?? false;
+    if (!$isLoggedIn || $_SESSION["role"] != "admin")
+        {
+            Header("Location: ../View/Login.php");
+            exit();
+        }
+
     $error   = "";
     $success = "";
     $action  = $_GET["action"] ?? "list";
