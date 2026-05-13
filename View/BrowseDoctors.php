@@ -34,15 +34,18 @@ include "../Controller/BrowseDoctorsController.php";
         <label for="spec-filter">Filter by Specialization:</label>
         <select id="spec-filter" onchange="FilterDoctors(this)">
             <option value="0">All Specializations</option>
-            <?php foreach ($specializations as $spec) { ?>
+            <?php
+             foreach ($specializations as $spec) 
+                { ?>
                 <option value="<?php echo $spec["id"]; ?>">
-                    <?php echo htmlspecialchars($spec["name"]); ?>
+                    <?php
+                     echo htmlspecialchars($spec["name"]);
+                      ?>
                 </option>
-            <?php } ?>
+            <?php }
+             ?>
         </select>
     </div>
-    
- <!-- doctors list rendered here, also re-rendered by AJAX -->
     <div class="doctors-grid" id="doctors-list">
         <?php
         while ($row =$doctors->fetch_assoc())
