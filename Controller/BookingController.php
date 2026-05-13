@@ -40,8 +40,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 $error = "Please enter a reason for your visit.";
             }
         else
-            {
-                // re-check slot is still free before saving
-                $check = $database->checkSlotTaken($connection, $doctor_id, $date, $time);
+            {     $check = $database->checkSlotTaken($connection, $doctor_id, $date, $time);
+                 if ($check->num_rows > 0)
+                    {
+                        $error = "This slot was just taken. Please go back and choose another time.";
+                    }
+                else
+                    {
+                        $appointment_id = $database->saveAppointment($connection, $patient_id, $doctor_id, $date, $time, $reason);
+
+                        if ($appointment_id)
+                            {
+                                Header("Location: BookingConfirmation.php?id=" . $appointment_id);
+                                exit();
+                            }
+                        else
+                            {
+                                $error = "Booking failed. Please try again.";
+                            }
+                    }
             }
-    ?>
+    }
