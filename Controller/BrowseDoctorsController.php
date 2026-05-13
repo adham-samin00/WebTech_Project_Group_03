@@ -9,4 +9,20 @@ include "../Model/BrowseDoctorsdb.php";
 //         Header("Location: Login.php");
 //         exit();
 //     }
+
+$database   = new db();
+$connection = $database->connection();
+
+$specializationsResult = $database->getAllSpecializations($connection);
+$specializations       = [];
+while ($row = $specializationsResult->fetch_assoc())
+    {
+        $specializations[] = $row;
+    }
+
+$doctors = $database->getAllActiveDoctors($connection);
+
+
 ?>
+
+
