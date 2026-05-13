@@ -98,6 +98,16 @@
             $result = $statement->execute();
             return $result;
         }
+    function deactivateDoctorUser($user_id)
+        {
+            $database   = new db();
+            $connection = $database->connection();
+            $sql = "UPDATE users SET is_active = 0 WHERE id = ?";
+            $statement = $connection->prepare($sql);
+            $statement->bind_param("i", $user_id);
+            $result = $statement->execute();
+            return $result;
+        }
 
 
 ?>
