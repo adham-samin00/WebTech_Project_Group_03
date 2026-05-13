@@ -25,3 +25,13 @@ function LoadSlots(dateStr, clickedBtn) {
 
     document.getElementById("slots-area").innerHTML = "<p class='loading-msg'>Loading slots...</p>";
 }
+function PickSlot(time, clickedBtn) {
+    
+    let allSlots = document.querySelectorAll(".slot-btn");
+    allSlots.forEach(function (btn) {
+        btn.classList.remove("slot-btn-active");
+    });
+    clickedBtn.classList.add("slot-btn-active");
+    document.getElementById("selected_time").value = time;
+    document.getElementById("show-time").value     = time;
+}
