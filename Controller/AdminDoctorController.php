@@ -138,6 +138,21 @@
                             }
                             
                         }
+                    if (empty($error))
+                        {
+                            updateDoctorUser($update_user_id, $name, $email);
+                            $result = updateDoctor($update_doctor_id, $specialization_id, $bio, $consultation_fee, $photo_path, $available_days);
+
+                            if ($result !== false)
+                                {
+                                    Header("Location: ../View/AdminDoctors.php?success=updated");
+                                    exit();
+                                }
+                            else
+                                {
+                                    $error = "Could not update doctor profile.";
+                                }
+                        }
                     
                 }
         }
