@@ -40,4 +40,19 @@
             </div>
         <?php } 
          ?>
+            <div>
+            <h2><?php
+             echo htmlspecialchars($doctor["name"]); 
+             ?>
+             </h2>
+            <p class="doc-spec"><?php echo htmlspecialchars($doctor["specialization"] ?? "General Medicine"); ?></p>
+            <p class="doc-fee">Consultation Fee: BDT <?php echo number_format($doctor["consultation_fee"], 0); ?></p>
+            <?php
+             if (!empty($doctor["bio"])) { 
+                ?>
+                <p class="doc-bio"><?php echo htmlspecialchars($doctor["bio"]); ?></p>
+            <?php 
+            } ?>
+        </div>
+    </div>
 </html>
