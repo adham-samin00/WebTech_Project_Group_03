@@ -8,7 +8,7 @@ include "../Controller/DoctorDashboardController.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Dashboard - MediBook</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <!-- <script src="../Controller/JS/UpdateStatus.js"></script> -->
+    <script src="../Controller/JS/UpdateStatus.js"></script>
 </head>
 <body>
 
