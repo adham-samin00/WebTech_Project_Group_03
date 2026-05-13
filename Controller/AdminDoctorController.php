@@ -156,6 +156,25 @@
                     
                 }
         }
+if ($action == "delete" && $edit_id)
+    {
+        $doctorResult = getDoctorById($edit_id);
+        $doctorRow    = $doctorResult->fetch_assoc();
+
+        if ($doctorRow)
+            {
+                $result = deactivateDoctorUser($doctorRow["user_id"]);
+                if ($result)
+                    {
+                        Header("Location: ../View/AdminDoctors.php?success=deleted");
+                        exit();
+                    }
+                else
+                    {
+                        $error = "Could not deactivate doctor.";
+                    }
+            }
+    }
 
 $doctors = getAllDoctorsWithStats();
 $specializationsResult = getAllSpecializations();
