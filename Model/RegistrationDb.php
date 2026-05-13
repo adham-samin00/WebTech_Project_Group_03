@@ -14,8 +14,8 @@ function registerPatient($name, $email, $password_hash, $dob, $blood_group, $pho
 
 function checkEmailExists($email)
 {
-    $database   = new db();
-    $connection = $database->connection();
+    // $database   = new db();
+    // $connection = $database->connection();
     $sql       = "SELECT id FROM users WHERE email = ?";
     $statement = $connection->prepare($sql);
     $statement->bind_param("s", $email);
