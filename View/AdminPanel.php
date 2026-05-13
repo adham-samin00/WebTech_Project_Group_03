@@ -64,7 +64,7 @@ include "../Controller/AdminController.php";
                         </td>
                     </tr>
                 <?php
-                    $i++;
+                    //$i++;
                 }
                 ?>
             </tbody>
