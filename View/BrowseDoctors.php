@@ -1,3 +1,8 @@
+<?php
+include "../Controller/BrowseDoctorsController.php";
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
