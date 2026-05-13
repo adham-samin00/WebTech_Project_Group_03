@@ -8,3 +8,16 @@ function CancelAppointment(appointment_id, btn) {
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             let response = JSON.parse(this.responseText);
+             if (response.ok)
+                {   let row   = btn.closest("tr");
+                    let badge = row.querySelector(".status-tag");
+                    badge.textContent = "Cancelled";
+                    badge.className   = "status-tag tag-cancelled";
+                    btn.remove();
+                }
+            else
+                {
+                    alert("Could not cancel: " + response.message);
+                }
+        }
+    };
