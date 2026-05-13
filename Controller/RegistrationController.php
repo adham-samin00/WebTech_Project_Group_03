@@ -73,13 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 $existing_data = array();
                             }
                         
-                        $exisitng_data[] = $new_entry;
-                        $json_data = json_encode($exisitng_data, JSON_PRETTY_PRINT);
+                        $existing_data[] = $new_entry;
+                        $json_data = json_encode($existing_data, JSON_PRETTY_PRINT);
 
                     file_put_contents($json_file, $json_data);
-                    
-                    $data = file_get_contents($json_file);
-                    $mydata = json_decode($data);
         
 
                     Header("Location: Login.php?registered=1");
