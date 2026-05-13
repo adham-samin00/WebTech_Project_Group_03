@@ -7,7 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src ="../Controller/JS/getCount.js"></script>
     <title>Doctors</title>
+
 </head>
     <nav class="navbar">
         <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
@@ -238,7 +240,15 @@
                                 <td>" . number_format($row["consultation_fee"], 0) . "</td>
                                 <td><div class='days-pills'>$days_html</div></td>
                                 <td><span class='status-badge $badge_cls'>$badge_text</span></td>
-                                <td><span class='appt-count' id='appt-count-{$row['id']}'>...</span></td>
+                                <td>
+                                    <span class='appt-count' id='appt-count'>
+                                        Loading...
+                                    </span>
+
+                                    <script>
+                                        getStats({$row['id']});
+                                    </script>
+                                </td>                                
                                 <td>
                                     <div class='actions-cell'>
                                         <a href='AdminDoctors.php?action=edit&id={$row['id']}' class='btn-edit'>Edit</a>
