@@ -55,4 +55,31 @@
             } ?>
         </div>
     </div>
+    <div class="booking-box">
+
+        <h3>Select Date</h3>
+        <div class="date-row">
+            <?php
+             if (empty($next7days)) 
+             { ?>
+                <p class="no-slots">This doctor has no available days in the next 7 days.</p>
+            <?php 
+            } else { 
+                ?>
+                <?php
+                 foreach ($next7days as $day) 
+                 { ?>
+                    <button type="button" class="date-btn"
+                        onclick="LoadSlots('<?php echo $day['date']; ?>', this)">
+                        <?php
+                         echo htmlspecialchars($day["display"]);
+                          ?>
+                    </button>
+                <?php 
+                } ?>
+            <?php
+             } ?>
+        </div>
+
+        <h3>Select Time</h3>
 </html>
