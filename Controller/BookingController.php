@@ -61,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
           $doctor = null;
           if ($doctor_id)
     {
-        $result = $database->getDoctorById($connection, $doctor_id);
+        $result = getDoctorById( $doctor_id);
         $doctor = $result->fetch_assoc();
     }
 ?>
