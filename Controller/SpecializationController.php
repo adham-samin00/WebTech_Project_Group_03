@@ -1,6 +1,14 @@
 <?php
    include "../Model/Specializationdb.php";
    session_start();
+
+   $isLoggedIn = $_SESSION["loggedIn"] ?? false;
+    if (!$isLoggedIn || $_SESSION["role"] != "admin")
+        {
+            Header("Location: ../View/Login.php");
+            exit();
+        }
+
    $action = $_GET["action"]??"list";
    $post_action = "";
    $name = "";

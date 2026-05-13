@@ -9,16 +9,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src ="../Controller/JS/getCount.js"></script>
     <title>Doctors</title>
-
 </head>
+<body>
     <nav class="navbar">
         <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
-        <ul>
-            <li><a href="AdminPanel.php">Users</a></li>
-            <li><a href="Specializations.php">Specialization</a></li>
-            <li><a href="AdminDoctors.php">Doctors</a></li>
-        </ul>
-        <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
+        <div class = "navmid">
+            <ul>
+                <li><a href="AdminPanel.php">Users</a></li>
+                <li><a href="Specializations.php">Specialization</a></li>
+                <li><a href="AdminDoctors.php">Doctors</a></li>
+                <li><a href="AdminAppointments.php">Appointments</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <p>Admin: <?php echo htmlspecialchars($_SESSION["name"]); ?></p>
+            <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
+        </div>
     </nav>
     <div class = "page-wrapper">
         <div class = "page-top">
@@ -46,7 +52,7 @@
         ?>
         <?php if($action == "add"){ ?>
             <div class = "add_form">
-                <form method="post" action="" enctype="multipart/form-data">
+                <form method="post" action="../Controller/AdminDoctorController.php" enctype="multipart/form-data">
                     <input type="hidden" name = "action" value = "create">
                     <div class="form-row">
                         <div class="form-group">
@@ -270,8 +276,5 @@
             </table>
         </div>
     </div>
-
-<body>
-    
 </body>
 </html>
