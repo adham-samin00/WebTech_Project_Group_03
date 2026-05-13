@@ -88,6 +88,16 @@
             $result = $statement->execute();
             return $result;
         }
-    
+    function updateDoctorUser($user_id, $name, $email)
+        {
+            $database   = new db();
+            $connection = $database->connection();
+            $sql = "UPDATE users SET name = ?, email = ? WHERE id = ?";
+            $statement = $connection->prepare($sql);
+            $statement->bind_param("ssi", $name, $email, $user_id);
+            $result = $statement->execute();
+            return $result;
+        }
+
 
 ?>
