@@ -35,5 +35,21 @@ if (!empty($doctor["available_days"]))
         $available_days = explode(",", $doctor["available_days"]);
         $available_days = array_map("trim", $available_days);
     }
+$next7days = [];
+for ($i = 0; $i < 7; $i++)
+    {
+        $timestamp = strtotime("+$i days");
+        $weekday   = date("l", $timestamp);
+        $datestr   = date("Y-m-d", $timestamp);
+        $display   = date("D d M", $timestamp);
+
+        if (in_array($weekday, $available_days))
+            {
+                $next7days[] = [
+                    "date"    => $datestr,
+                    "display" => $display
+                                            ];
+            }
+    }
 
 ?>
