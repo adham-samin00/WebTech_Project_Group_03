@@ -1,7 +1,6 @@
 <?php
-include "../Controller/BrowseDoctorsController.php";
+  include "../Controller/BrowseDoctorsController.php";
 ?>
-
 
 <!DOCTYPE html>
 <html>

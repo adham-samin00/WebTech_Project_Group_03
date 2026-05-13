@@ -1,5 +1,5 @@
 <?php
-include "MyAppointmentsController.php";
+include "db.php";
 
 
 function getMyAppointments( $patient_id)

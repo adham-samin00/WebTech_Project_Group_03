@@ -1,19 +1,19 @@
 <?php
 
-include "db.php";
-// session_start();
+include "../Model/MyappointmentsDb.php";
+session_start();
 
-// $isLoggedIn = $_SESSION["loggedIn"] ?? false;
+$isLoggedIn = $_SESSION["loggedIn"] ?? false;
 
-// if (!$isLoggedIn || $_SESSION["role"] != "patient")
-//     {
-//         Header("Location: Login.php");
-//         exit();
-    // }
+if (!$isLoggedIn || $_SESSION["role"] != "patient")
+    {
+        Header("Location: Login.php");
+        exit();
+    }
      
 $patient_id = $_SESSION["user_id"];
 
-$result = $database->getMyAppointments($connection, $patient_id);
+$result =getMyAppointments( $patient_id);
 $grouped = [
     "Pending"   => [],
     "Confirmed" => [],
