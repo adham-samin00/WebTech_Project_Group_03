@@ -6,5 +6,13 @@
         "blood-group": "AB+",
         "phone": "01917654432",
         "role": "patient"
+    },
+    {
+        "name": "Samin",
+        "email": "didi@gmail.com",
+        "dob": "2026-05-05",
+        "blood-group": "B+",
+        "phone": "01998789878",
+        "role": "patient"
     }
 ]

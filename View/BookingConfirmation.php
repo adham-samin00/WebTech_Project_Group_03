@@ -1,3 +1,6 @@
+<?php
+include  "../Controller/BookingConfirmationController.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>

@@ -16,6 +16,7 @@ include "../Controller/DoctorProfileController.php";
     <ul class="nav-links">
         <li><a href="BrowseDoctors.php">Find a Doctor</a></li>
         <li><a href="MyAppointments.php">My Appointments</a></li>
+        <li><a href="PatientHome.php">Home</a></li>
     </ul>
      <div class="nav-right">
         <p><?php
