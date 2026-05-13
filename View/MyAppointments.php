@@ -1,3 +1,7 @@
+<?php
+include "../Controller/MyAppointmentsController.php";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
