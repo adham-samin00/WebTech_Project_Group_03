@@ -13,16 +13,16 @@ if (!$isLoggedIn || $_SESSION["role"] != "patient")
 
 $appointment_id = intval($_GET["id"] ?? 0);
 
-if (!$appointment_id)
-    {
-        Header("Location: BrowseDoctors.php");
-        exit();
-    }
+// if (!$appointment_id)
+//     {
+//         Header("Location: BrowseDoctors.php");
+//         exit();
+//     }
 $result      = getAppointmentDetails( $appointment_id);
 $appointment = $result->fetch_assoc();
-if (!$appointment || $appointment["patient_id"] != $_SESSION["user_id"])
-    {
-        Header("Location: BrowseDoctors.php");
-        exit();
-    }
+// if (!$appointment || $appointment["patient_id"] != $_SESSION["user_id"])
+//     {
+//         Header("Location: BrowseDoctors.php");
+//         exit();
+//     }
 ?>

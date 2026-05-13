@@ -9,6 +9,6 @@ function FilterDoctors(selectBox) {
         }
     };
 
-    xhttp.open("GET", "../Application/FilterDoctors.php?specialization_id=" + specialization_id, true);
+    xhttp.open("GET", "../Controller/Application/FilterDoctors.php?specialization_id=" + specialization_id, true);
     xhttp.send();
 }

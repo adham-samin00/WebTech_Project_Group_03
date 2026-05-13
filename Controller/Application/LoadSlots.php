@@ -1,5 +1,4 @@
 <?php
-
 include "../../Model/DoctorProfileDb.php";
 session_start();
 
@@ -11,7 +10,7 @@ if (!$isLoggedIn || $_SESSION["role"] != "patient")
         exit();
     }
     $doctor_id = intval($_GET["doctor_id"] ?? 0);
-      $date      = trim($_GET["date"] ?? "");
+    $date      = trim($_GET["date"] ?? "");
 
 if (!$doctor_id || empty($date))
     {

@@ -1,6 +1,6 @@
 <?php
 
-include "../Model/BrowseDoctorsDb.php";
+include "../../Model/DoctorProfileDb.php";
 session_start();
 
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;

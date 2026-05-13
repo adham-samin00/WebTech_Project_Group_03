@@ -1,6 +1,6 @@
 <?php
 
-include "../Model/MyappointmentsDb.php";
+include "../../Model/MyappointmentsDb.php";
 session_start();
 
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;
@@ -17,8 +17,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $appointment_id = intval($input["appointment_id"] ?? 0);
         $patient_id     = $_SESSION["user_id"];
 
-        if (!$appointment_id)
+        if ($appointment_id)
             {
-                echo json_encode(["ok" => false, "message" => "Invalid appointment"]);
-                exit();
+                $affected = cancelAppointment($appointment_id, $patient_id);
+                // echo json_encode(["ok" => false, "message" => "Invalid appointment"]);
+                // exit();
             }
+          
+            //$affected = cancelAppointment($appointment_id, $patient_id);
+
+        // if ($affected > 0)
+        //     {
+        //         echo json_encode(["ok" => true]);
+        //     }
+        // else
+        //     {
+        //         echo json_encode(["ok" => false, "message" => "Could not cancel. Only pending appointments can be cancelled."]);
+        //     }
+    }
+         else
+    {
+        echo json_encode(["ok" => false, "message" => "Invalid request"]);
+    }
+?>

@@ -1,5 +1,5 @@
 <?php
-include  "../Controller/BookingConfirmationController.php";
+    include  "../Controller/BookingConfirmationController.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,7 +7,6 @@ include  "../Controller/BookingConfirmationController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Booking Confirmed - MediBook</title> 
-    <!-- <link rel="stylesheet" href="style.css">  -->
 </head>
 <body>
     <div class="topnav">
