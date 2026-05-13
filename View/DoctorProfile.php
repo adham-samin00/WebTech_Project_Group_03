@@ -104,4 +104,40 @@
                 </div>
             </div>
     
+<div class="input-group">
+                <label for="reason">Reason for Visit</label>
+                <textarea id="reason" name="reason"
+                          placeholder="Describe your symptoms or reason for the visit..." required></textarea>
+            </div>
+
+            <input type="submit" class="submit-btn" value="Book Appointment"
+                   onclick="return checkBeforeBook()">
+
+        </form>
+        <?php } 
+        ?>
+
+    </div>
+
+</div>
+
+<script>
+const origLoadSlots = LoadSlots;
+LoadSlots = function(dateStr, btn)
+ {
+    origLoadSlots(dateStr, btn);
+    document.getElementById("show-date").value = btn.textContent.trim();
+};
+
+function checkBeforeBook() 
+{
+    let date = document.getElementById("selected_date").value;
+    let time = document.getElementById("selected_time").value;
+    if (!date) { alert("Please select a date first."); return false; }
+    if (!time) { alert("Please select a time slot."); return false; }
+    return true;
+}
+</script>
+
+</body>
 </html>
