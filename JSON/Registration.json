@@ -8,6 +8,11 @@
         "role": "patient"
     },
     {
+        "name": "smi",
+        "email": "sm@gmail.com",
+        "dob": "2026-05-13",
+        "blood-group": "A+",
+        "phone": "01819922348",
         "name": "Ahnaf Tanvir",
         "email": "abcde@gmail.com",
         "dob": "2026-05-11",
