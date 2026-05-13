@@ -45,3 +45,15 @@ foreach ($all_slots as $slot)
                 $available[] = $slot;
             }
     }
+    if (empty($available))
+    {
+        echo "<p class='no-slots'>No slots available for this date.</p>";
+    }
+else
+    {
+        foreach ($available as $slot)
+            {
+                echo "<button type='button' class='slot-btn' onclick='PickSlot(\"$slot\", this)'>$slot</button>";
+            }
+    }
+?>
