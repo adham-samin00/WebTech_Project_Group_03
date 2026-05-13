@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if($result)
                 {
-                    $json_file = "../data.json"; 
+                    $json_file = "../JSON/Registration.json"; 
 
                     $new_entry = [
                         "name" => $name,
