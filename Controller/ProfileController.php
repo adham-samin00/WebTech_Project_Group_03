@@ -83,10 +83,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                             {
                                 $success = "Password changed successfully.";
                             }
-                        else
-                            {
-                                $error = "Password change failed. Please try again.";
-                            }
+                        // else
+                        //     {
+                        //         $error = "Password change failed. Please try again.";
+                        //     }
                     }
 
             }
