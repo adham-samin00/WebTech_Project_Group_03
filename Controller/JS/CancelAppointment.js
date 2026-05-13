@@ -21,3 +21,7 @@ function CancelAppointment(appointment_id, btn) {
                 }
         }
     };
+      xhttp.open("POST", "../Application/CancelAppointment.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/json");
+    xhttp.send(JSON.stringify({ appointment_id: appointment_id }));
+}
