@@ -30,3 +30,18 @@ for ($t = $start; $t < $end; $t += 1800)
     {
         $all_slots[] = date("H:i", $t);
     }
+
+$booked_result = $database->getBookedTimes($connection, $doctor_id, $date);
+$booked        = [];
+while ($row = $booked_result->fetch_assoc())
+    {
+        $booked[] = substr($row["appointment_time"], 0, 5);
+    }
+$available = [];
+foreach ($all_slots as $slot)
+    {
+        if (!in_array($slot, $booked))
+            {
+                $available[] = $slot;
+            }
+    }
