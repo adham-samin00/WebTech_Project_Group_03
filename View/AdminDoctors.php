@@ -109,7 +109,7 @@
                 </form>
             </div>
         <?php } ?>
-        <?php if ($action == "" && $edit_data) {
+        <?php if ($action == "edit" && $edit_data) {
             $saved_days = explode(",", $edit_data["available_days"] ?? "");
         ?>
             <div class = "form-panel">

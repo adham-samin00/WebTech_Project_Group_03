@@ -113,7 +113,29 @@
                             $currentResult = getDoctorById($update_doctor_id);
                             $currentDoctor = $currentResult->fetch_assoc();
                             $photo_path    = $currentDoctor["photo_path"];
+                            if (!empty($_FILES["photo"]["name"]))
+                            {
+                                $file     = $_FILES["photo"];
+                                $allowed  = ["image/jpeg", "image/png"];
+                                $max_size = 2 * 1024 * 1024;
 
+                                if (!in_array($file["type"], $allowed))
+                                    {
+                                        $error = "Photo must be JPEG or PNG.";
+                                    }
+                                elseif ($file["size"] > $max_size)
+                                    {
+                                        $error = "Photo must be under 2MB.";
+                                    }
+                                else
+                                    {
+                                        $ext        = pathinfo($file["name"], PATHINFO_EXTENSION);
+                                        $filename   = "doc_" . time() . "_" . uniqid() . "." . $ext;
+                                        $upload_dir = "../public/uploads/doctors/";
+                                        $photo_path = $upload_dir . $filename;
+                                        move_uploaded_file($file["tmp_name"], $photo_path);
+                                    }
+                            }
                             
                         }
                     
@@ -127,12 +149,10 @@ while ($row = $specializationsResult->fetch_assoc())
     {
         $specializations[] = $row;
     }
-
-?>
 $edit_data = null;
 if ($action == "edit" && $edit_id)
     {
-        $editResult = $database->getDoctorById($connection, $edit_id);
+        $editResult = getDoctorById($edit_id);
         $edit_data  = $editResult->fetch_assoc();
     }
 ?>
