@@ -9,8 +9,8 @@ include "../Controller/BrowseDoctorsController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find a Doctor - MediBook</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="../Controller/JS/FilterDoctors.js"></script>
+    <!-- <link rel="stylesheet" href="style.css">
+    <script src="../Controller/JS/FilterDoctors.js"></script> -->
 </head>
 <body>
 
