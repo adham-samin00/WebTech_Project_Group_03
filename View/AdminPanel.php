@@ -7,11 +7,18 @@ include "../Controller/AdminController.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel - MediBook</title>
+    <title>Admin Dashboard - MediBook</title>
     <script src="../Controller/JS/ToggleActive.js"></script>
 </head>
 
 <body>
+        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
+        <ul>
+            <li><a href="AdminPanel.php">Users</a></li>
+            <li><a href="Specializations.php">Specialization</a></li>
+            <li><a href="AdminDoctors.php">Doctors</a></li>
+            <li><a href = "AdminAppointments.php">Appointments</a></li>
+        </ul>
 
     <div class="topnav">
         <a href="AdminPanel.php" class="sitename">+<span>Medi</span>Book</a>
