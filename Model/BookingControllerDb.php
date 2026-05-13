@@ -12,7 +12,19 @@ function checkSlotTaken( $doctor_id, $date, $time)
         $result = $statement->get_result();
         return $result;
     }
-
+function saveAppointment( $patient_id, $doctor_id, $date, $time, $reason)
+    {   $database   = new db();
+         $connection = $database->connection();
+        $sql = "INSERT INTO appointments (patient_id, doctor_id, appointment_date, appointment_time, reason, status, created_at) VALUES (?, ?, ?, ?, ?, 'Pending', NOW())";
+        $statement = $connection->prepare($sql);
+        $statement->bind_param("iisss", $patient_id, $doctor_id, $date, $time, $reason);
+        $result = $statement->execute();
+        if ($result)
+            {
+                return $connection->insert_id;
+            }
+        return false;
+    }
 
 
 ?>

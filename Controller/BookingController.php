@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     }
                 else
                     {
-                        $appointment_id = $database->saveAppointment($connection, $patient_id, $doctor_id, $date, $time, $reason);
+                        $appointment_id =saveAppointment( $patient_id, $doctor_id, $date, $time, $reason);
 
                         if ($appointment_id)
                             {
