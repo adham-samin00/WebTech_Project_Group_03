@@ -18,7 +18,7 @@ if (!$appointment_id)
         Header("Location: BrowseDoctors.php");
         exit();
     }
-$result      = $database->getAppointmentDetails( $appointment_id);
+$result      = getAppointmentDetails( $appointment_id);
 $appointment = $result->fetch_assoc();
 if (!$appointment || $appointment["patient_id"] != $_SESSION["user_id"])
     {

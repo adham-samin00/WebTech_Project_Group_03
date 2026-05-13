@@ -12,4 +12,15 @@ function getDoctorById( $doctor_id)
         $result = $statement->get_result();
         return $result;
     }
+    function getBookedTimes($doctor_id, $date)
+    {
+        $database   =new db();
+        $connection =$database->connection();
+        $sql = "SELECT appointment_time FROM appointments WHERE doctor_id = ? AND appointment_date = ? AND status != 'Cancelled'";
+        $statement = $connection->prepare($sql);
+        $statement->bind_param("is", $doctor_id, $date);
+        $statement->execute();
+        $result = $statement->get_result();
+        return $result;
+    }
     ?>

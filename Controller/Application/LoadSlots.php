@@ -1,6 +1,6 @@
 <?php
 
-include "";
+include "../../Model/DoctorProfileDb.php";
 session_start();
 
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;
@@ -18,8 +18,7 @@ if (!$doctor_id || empty($date))
         echo "<p class='no-slots'>Invalid request.</p>";
         exit();
     }
-    $database   = new db();
-$connection = $database->connection();
+   
 
 $all_slots = [];
 $start     = strtotime("09:00");
@@ -30,7 +29,7 @@ for ($t = $start; $t < $end; $t += 1800)
         $all_slots[] = date("H:i", $t);
     }
 
-$booked_result = $database->getBookedTimes($connection, $doctor_id, $date);
+$booked_result = getBookedTimes($doctor_id, $date);
 $booked        = [];
 while ($row = $booked_result->fetch_assoc())
     {
