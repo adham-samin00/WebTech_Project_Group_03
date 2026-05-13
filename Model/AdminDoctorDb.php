@@ -45,6 +45,22 @@
         $result = $statement->get_result();
         return $result;
     }
+    function getAllDoctorsWithStats()
+    {
+        $database   = new db();
+        $connection = $database->connection();
+        $sql = "SELECT d.id, u.name, u.email, u.is_active, s.name AS specialization,
+                       d.consultation_fee, d.photo_path, d.available_days, d.created_at,
+                       COUNT(a.id) AS appointment_count
+                FROM doctors d
+                JOIN users u ON d.user_id = u.id
+                LEFT JOIN specializations s ON d.specialization_id = s.id
+                LEFT JOIN appointments a ON d.id = a.doctor_id
+                GROUP BY d.id
+                ORDER BY d.created_at DESC";
+        $result = $connection->query($sql);
+        return $result;
+    }
 
 
 ?>

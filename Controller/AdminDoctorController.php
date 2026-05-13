@@ -42,13 +42,10 @@
             else
                 {
                     if($post_action == "create"){
+                        $existing = checkEmailExists($email);
                         if(strlen($password) < 6)
                             {
                                 $error = "Password must be at least 6 characters.";
-                            }
-                        else
-                            {
-                                $existing = checkEmailExists($email);
                             }
                         if($existing->num_rows > 0)
                             {
@@ -107,9 +104,18 @@
                                             }
                                     }
                             }
+                    else if($post_action == "update")
+                        {
+                            $update_doctor_id = intval($_POST["doctor_id"] ?? 0);
+                            $update_user_id   = intval($_POST["user_id"] ?? 0);
+                            
+                        }
+                    
                 }
             }
         }
+
+$doctors = getAllDoctorsWithStats();
 $specializationsResult = getAllSpecializations();
 $specializations       = [];
 while ($row = $specializationsResult->fetch_assoc())
