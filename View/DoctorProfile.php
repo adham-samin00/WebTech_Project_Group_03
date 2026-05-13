@@ -16,10 +16,28 @@
     </ul>
      <div class="nav-right">
         <p><?php
-        //  echo htmlspecialchars($_SESSION["name"]);
+           echo htmlspecialchars($_SESSION["name"]);
          ?></p>
         <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
     </div>
 </div>
    
+<div class="main-area">
+
+    <!-- doctor info -->
+    <div class="doctor-info-box">
+        <?php
+         if (!empty($doctor["photo_path"])) 
+         { ?>
+            <img src="<?php echo htmlspecialchars($doctor["photo_path"]); ?>" class="doc-big-photo" alt="">
+        <?php }
+         else 
+        { ?>
+            <div class="doc-big-initial">
+                <?php
+                 echo strtoupper(substr($doctor["name"], 0, 1)); 
+                 ?>
+            </div>
+        <?php } 
+         ?>
 </html>
