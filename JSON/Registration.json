@@ -6,5 +6,13 @@
         "blood-group": "AB+",
         "phone": "01917654432",
         "role": "patient"
+    },
+    {
+        "name": "smi",
+        "email": "sm@gmail.com",
+        "dob": "2026-05-13",
+        "blood-group": "A+",
+        "phone": "01819922348",
+        "role": "patient"
     }
 ]

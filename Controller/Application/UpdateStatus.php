@@ -1,6 +1,6 @@
 <?php
 
-include_once "../../Model/DoctorDashboardDb.php" "../../Model/UpdateStatusByDoctorDb.php" ;
+include_once "../../Model/DoctorDashboardDb.php";
 session_start();
 
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;
