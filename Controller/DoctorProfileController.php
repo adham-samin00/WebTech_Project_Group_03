@@ -18,4 +18,22 @@ include "../Model/DoctorProfileDb.php";
 //         Header("Location: BrowseDoctors.php");
 //         exit();
 //     }
+$database   =new db();
+$connection =$database->connection();
+
+$result = $database->getDoctorById($connection, $doctor_id);
+$doctor = $result->fetch_assoc();
+
+if (!$doctor)
+    {
+        Header("Location: BrowseDoctors.php");
+        exit();
+    }
+$available_days = [];
+if (!empty($doctor["available_days"]))
+    {
+        $available_days = explode(",", $doctor["available_days"]);
+        $available_days = array_map("trim", $available_days);
+    }
+
 ?>
