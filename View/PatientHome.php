@@ -65,7 +65,7 @@ include "../Controller/ProfileController.php";
 
                     <div class="input-group">
                         <label>Email</label>
-                        <input type="email" value="<?php echo htmlspecialchars($user["email"] ?? ""); ?>" disabled>
+                        <input type="email" value="<?php //echo htmlspecialchars($user["email"] ?? ""); ?>" disabled>
                     </div>
 
                     <div class="input-group">
