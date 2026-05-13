@@ -17,7 +17,7 @@ include "../Controller/AdminController.php";
             <li><a href="AdminPanel.php">Users</a></li>
             <li><a href="Specializations.php">Specialization</a></li>
             <li><a href="AdminDoctors.php">Doctors</a></li>
-
+            <li><a href = "AdminAppointments.php">Appointments</a></li>
         </ul>
 
     <div class="topnav">
