@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                             $_SESSION["role"]     = $row["role"];
                             $_SESSION["loggedIn"] = true;
 
-                            // setcookie("user_email", $row["email"], time()+3600, "/");
+                            setcookie("user_email", $row["email"], time()+3600, "/");
 
                             if ($row["role"] == "patient")
                                     {
