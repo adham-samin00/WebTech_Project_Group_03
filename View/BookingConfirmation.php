@@ -18,4 +18,39 @@
         <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
     </div>
 </div>
-</html>
+<div class="main-area">
+    <div class="confirm-box">
+
+        <h2>Appointment Booked!</h2>
+        <p>
+            Your appointment has been submitted successfully.
+        </p>
+
+        <div class="appt-id">Appointment ID: #<?php echo $appointment["id"]; ?></div>
+
+        <div class="confirm-details">
+            <div class="confirm-row">
+                <span>Doctor</span>
+                <span><?php echo htmlspecialchars($appointment["doctor_name"]); ?></span>
+            </div>
+            <div class="confirm-row">
+                <span>Specialization</span>
+                <span><?php echo htmlspecialchars($appointment["specialization"] ?? "General"); ?></span>
+            </div>
+            <div class="confirm-row">
+                <span>Date</span>
+                <span><?php echo date("d M Y", strtotime($appointment["appointment_date"])); ?></span>
+            </div>
+            <div class="confirm-row">
+                <span>Time</span>
+                <span><?php echo substr($appointment["appointment_time"], 0, 5); ?></span>
+            </div>
+            <div class="confirm-row">
+                <span>Reason</span>
+                <span><?php echo htmlspecialchars($appointment["reason"]); ?></span>
+            </div>
+            <div class="confirm-row">
+                <span>Status</span>
+                <span><span class="status-tag tag-pending">Pending</span></span>
+            </div>
+        </div>
