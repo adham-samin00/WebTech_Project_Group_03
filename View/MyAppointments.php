@@ -95,3 +95,9 @@
 
     <?php 
     } ?>
+ <a href="BrowseDoctors.php" class="book-more-link">+ Book a New Appointment</a>
+
+</div>
+
+</body>
+</html>
