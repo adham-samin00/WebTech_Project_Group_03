@@ -1,3 +1,6 @@
+<?php
+include "../Controller/DoctorProfileController.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
