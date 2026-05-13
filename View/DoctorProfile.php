@@ -14,5 +14,12 @@
         <li><a href="BrowseDoctors.php">Find a Doctor</a></li>
         <li><a href="MyAppointments.php">My Appointments</a></li>
     </ul>
+     <div class="nav-right">
+        <p><?php
+        //  echo htmlspecialchars($_SESSION["name"]);
+         ?></p>
+        <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
+    </div>
+</div>
    
 </html>
