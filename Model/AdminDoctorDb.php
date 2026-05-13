@@ -61,6 +61,22 @@
         $result = $connection->query($sql);
         return $result;
     }
+    function getDoctorById($doctor_id)
+    {
+        $database   = new db();
+        $connection = $database->connection();
+        $sql = "SELECT d.*, u.name, u.email, u.is_active, u.id AS user_id,
+                       s.name AS specialization_name
+                FROM doctors d
+                JOIN users u ON d.user_id = u.id
+                LEFT JOIN specializations s ON d.specialization_id = s.id
+                WHERE d.id = ?";
+        $statement = $connection->prepare($sql);
+        $statement->bind_param("i", $doctor_id);
+        $statement->execute();
+        $result = $statement->get_result();
+        return $result;
+    }
 
 
 ?>

@@ -109,6 +109,10 @@
                             $update_doctor_id = intval($_POST["doctor_id"] ?? 0);
                             $update_user_id   = intval($_POST["user_id"] ?? 0);
                             
+                            $currentResult = getDoctorById($update_doctor_id);
+                            $currentDoctor = $currentResult->fetch_assoc();
+                            $photo_path    = $currentDoctor["photo_path"];
+
                         }
                     
                 }
