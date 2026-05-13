@@ -1,5 +1,5 @@
 <?php
-include "db.php"
+include "db.php";
 
 function checkSlotTaken( $doctor_id, $date, $time)
     {   

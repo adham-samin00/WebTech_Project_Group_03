@@ -11,4 +11,23 @@ include "db.php";
 //         exit();
     // }
      
-     ?>
+$patient_id = $_SESSION["user_id"];
+
+$result = $database->getMyAppointments($connection, $patient_id);
+$grouped = [
+    "Pending"   => [],
+    "Confirmed" => [],
+    "Completed" => [],
+    "Cancelled" => [],
+    "No-Show"   => []
+];
+
+while ($row = $result->fetch_assoc())
+    {
+        $status = $row["status"];
+        if (isset($grouped[$status]))
+            {
+                $grouped[$status][] = $row;
+            }
+    }
+?>
