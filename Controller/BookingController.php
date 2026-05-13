@@ -11,9 +11,6 @@ include "../Model/BookingControllerDb.php";
 //         exit();
 //     }
 
-$database   = new db();
-$connection = $database->connection();
-
 $doctor_id  = intval($_POST["doctor_id"] ?? 0);
 $date       = trim($_POST["date"] ?? "");
 $time       = trim($_POST["time"] ?? "");
@@ -40,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 $error = "Please enter a reason for your visit.";
             }
         else
-            {     $check = $database->checkSlotTaken($connection, $doctor_id, $date, $time);
+            {     $check = checkSlotTaken( $doctor_id, $date, $time);
                  if ($check->num_rows > 0)
                     {
                         $error = "This slot was just taken. Please go back and choose another time.";
