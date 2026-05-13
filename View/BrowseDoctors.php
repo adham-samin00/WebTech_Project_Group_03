@@ -20,5 +20,22 @@
         <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
     </div>
 </div>
+
+<div class="main-area">
+
+    <h2>Find a Doctor</h2>
+    <p class="page-desc">Browse available doctors and book an appointment</p>
+    <div class="filter-bar">
+        <label for="spec-filter">Filter by Specialization:</label>
+        <select id="spec-filter" onchange="FilterDoctors(this)">
+            <option value="0">All Specializations</option>
+            <?php foreach ($specializations as $spec) { ?>
+                <option value="<?php echo $spec["id"]; ?>">
+                    <?php echo htmlspecialchars($spec["name"]); ?>
+                </option>
+            <?php } ?>
+        </select>
+    </div>
+    
 </body>
 </html>
