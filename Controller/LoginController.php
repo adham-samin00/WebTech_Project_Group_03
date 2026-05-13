@@ -45,11 +45,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                                         Header("Location: ../View/PatientHome.php");
                                         exit();
                                     }
-                            elseif ($row["role"] == "doctor")
-                                {
-                                    Header("Location: ../View/DoctorDashboard.php");
-                                    exit();
-                                }
                             elseif ($row["role"] == "admin")
                                 {
                                     Header("Location: ../View/AdminPanel.php");
