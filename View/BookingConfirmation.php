@@ -54,3 +54,13 @@
                 <span><span class="status-tag tag-pending">Pending</span></span>
             </div>
         </div>
+        <div class="confirm-btns">
+            <a href="MyAppointments.php" class="green-btn">My Appointments</a>
+            <a href="BrowseDoctors.php" class="grey-btn">Find Another Doctor</a>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
