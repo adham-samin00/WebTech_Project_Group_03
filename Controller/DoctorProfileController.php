@@ -18,10 +18,9 @@ include "../Model/DoctorProfileDb.php";
 //         Header("Location: BrowseDoctors.php");
 //         exit();
 //     }
-$database   =new db();
-$connection =$database->connection();
 
-$result = $database->getDoctorById($connection, $doctor_id);
+
+$result = getDoctorById( $doctor_id);
 $doctor = $result->fetch_assoc();
 
 if (!$doctor)

@@ -10,17 +10,16 @@ include "../Model/BrowseDoctorsdb.php";
 //         exit();
 //     }
 
-$database   = new db();
-$connection = $database->connection();
 
-$specializationsResult = $database->getAllSpecializations($connection);
+
+$specializationsResult = getAllSpecializations();
 $specializations       = [];
 while ($row = $specializationsResult->fetch_assoc())
     {
         $specializations[] = $row;
     }
 
-$doctors = $database->getAllActiveDoctors($connection);
+$doctors = getAllActiveDoctors();
 
 
 ?>
