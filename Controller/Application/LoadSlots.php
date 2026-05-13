@@ -21,7 +21,6 @@ if (!$doctor_id || empty($date))
     $database   = new db();
 $connection = $database->connection();
 
-// all time slots 09:00 to 17:00 every 30 minutes
 $all_slots = [];
 $start     = strtotime("09:00");
 $end       = strtotime("17:00");
