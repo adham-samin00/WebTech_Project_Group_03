@@ -14,7 +14,7 @@
         <ul>
             <li><a href="AdminPanel.php">Users</a></li>
             <li><a href="Specializations.php">Specialization</a></li>
-            <li><a href="AdminDoctorDashboard.php">Doctors</a></li>
+            <li><a href="AdminDoctors.php">Doctors</a></li>
         </ul>
         <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
     </nav>
@@ -242,7 +242,7 @@
                                 <td>
                                     <div class='actions-cell'>
                                         <a href='AdminDoctors.php?action=edit&id={$row['id']}' class='btn-edit'>Edit</a>
-                                        <a href='../Controller/DoctorController.php?action=delete&id={$row['id']}'
+                                        <a href='../Controller/AdminDoctorController.php?action=delete&id={$row['id']}'
                                         class='btn-delete'
                                         onclick=\"return confirm('Deactivate this doctor account?')\">Deactivate</a>
                                     </div>
