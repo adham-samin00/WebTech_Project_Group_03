@@ -108,6 +108,16 @@
             $result = $statement->execute();
             return $result;
         }
+    function getDoctorCount($id)
+        {
+            $database = new db();
+            $connection = $database->connection();
+            $sql = "SELECT COUNT(*) AS TOTAL 
+                    FROM appointments 
+                    WHERE doctor_id = '".$id."'";
+            $result = $connection->query($sql);
+            return $result;
+        }
 
 
 ?>
