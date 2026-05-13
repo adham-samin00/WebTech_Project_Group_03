@@ -41,3 +41,57 @@
         <div class="group-title <?php echo $info['title_css']; ?>">
             <?php echo $info["label"]; ?> (<?php echo count($appts); ?>)
         </div>
+ <?php if (empty($appts)) { ?>
+            <p>
+                No <?php echo strtolower($info["label"]); ?> appointments.
+            </p>
+        <?php } else { ?>
+            <table class="appt-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Doctor</th>
+                        <th>Specialization</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                        <?php if ($status == "Pending") { ?>
+                            <th>Action</th>
+                        <?php } ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($appts as $appt) { ?>
+                    <tr>
+                        <td>#<?php echo $appt["id"]; ?></td>
+                        <td><?php echo htmlspecialchars($appt["doctor_name"]); ?></td>
+                        <td><?php echo htmlspecialchars($appt["specialization"] ?? "General"); ?></td>
+                        <td><?php echo date("d M Y", strtotime($appt["appointment_date"])); ?></td>
+                        <td><?php echo substr($appt["appointment_time"], 0, 5); ?></td>
+                        <td><?php echo htmlspecialchars($appt["reason"]); ?></td>
+                        <td>
+                            <span class="status-tag <?php echo $info['tag_css']; ?>">
+                                <?php echo $appt["status"]; ?>
+                            </span>
+                        </td>
+                        <?php if ($status == "Pending") { ?>
+                            <td>
+                                <button class="cancel-btn"
+                                    onclick="CancelAppointment(<?php echo $appt['id']; ?>, this)">
+                                    Cancel
+                                </button>
+                            </td>
+                        <?php }
+                         ?>
+                    </tr>
+                    <?php }
+                     ?>
+                </tbody>
+            </table>
+        <?php }
+         ?>
+    </div>
+
+    <?php 
+    } ?>
