@@ -11,5 +11,5 @@ if (!$isLoggedIn || $_SESSION["role"] != "admin")
         exit();
     }
 
-$users = getAllUsers();
+//$users = getAllUsers();
 ?>
