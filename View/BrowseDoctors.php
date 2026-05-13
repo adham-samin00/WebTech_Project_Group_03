@@ -42,5 +42,38 @@ include "../Controller/BrowseDoctorsController.php";
         </select>
     </div>
     
+ <!-- doctors list rendered here, also re-rendered by AJAX -->
+    <div class="doctors-grid" id="doctors-list">
+        <?php
+        while ($row =$doctors->fetch_assoc())
+            {
+                $initial =strtoupper(substr($row["name"], 0, 1));
+                $fee=number_format($row["consultation_fee"], 0);
+
+                if (!empty($row["photo_path"]))
+                    {
+                      $photo = "<img src='" . htmlspecialchars($row["photo_path"]) . "' class='doc-photo' alt=''>";
+                    }
+                else
+                    {
+                       $photo = "<div class='doc-initial'>$initial</div>";
+                    }
+
+                echo "
+                <div class='doc-card'>
+                    <div class='doc-card-top'>$photo</div>
+                    <div class='doc-card-info'>
+                        <h3>" . htmlspecialchars($row["name"]) . "</h3>
+                        <p class='doc-spec'>" . htmlspecialchars($row["specialization"] ?? "General") . "</p>
+                        <p class='doc-fee'>BDT $fee</p>
+                        <a href='DoctorProfile.php?id={$row['id']}' class='view-btn'>View &amp; Book</a>
+                    </div>
+                </div>";
+            }
+        ?>
+    </div>
+
+</div>
+
 </body>
 </html>
