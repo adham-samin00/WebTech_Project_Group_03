@@ -104,19 +104,20 @@
                                             }
                                     }
                             }
+                    }
                     else if($post_action == "update")
                         {
                             $update_doctor_id = intval($_POST["doctor_id"] ?? 0);
                             $update_user_id   = intval($_POST["user_id"] ?? 0);
-                            
+
                             $currentResult = getDoctorById($update_doctor_id);
                             $currentDoctor = $currentResult->fetch_assoc();
                             $photo_path    = $currentDoctor["photo_path"];
 
+                            
                         }
                     
                 }
-            }
         }
 
 $doctors = getAllDoctorsWithStats();
@@ -127,4 +128,11 @@ while ($row = $specializationsResult->fetch_assoc())
         $specializations[] = $row;
     }
 
+?>
+$edit_data = null;
+if ($action == "edit" && $edit_id)
+    {
+        $editResult = $database->getDoctorById($connection, $edit_id);
+        $edit_data  = $editResult->fetch_assoc();
+    }
 ?>
