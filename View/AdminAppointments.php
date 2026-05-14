@@ -11,13 +11,15 @@ include "../Controller/AdminAppointmentsController.php";
 </head>
 <body>
 
-<div class="topnav">
-    <a href="AdminAppointments.php" class="sitename"><span>Medi</span>Book</a>
-    <div class="nav-right">
-        <p>Admin: <?php echo htmlspecialchars($_SESSION["name"]); ?></p>
-        <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
-    </div>
-</div>
+<nav class="navbar">
+        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
+        <ul>
+            <li><a href="AdminPanel.php">Users</a></li>
+            <li><a href="Specializations.php">Specialization</a></li>
+            <li><a href="AdminDoctors.php">Doctors</a></li>
+        </ul>
+        <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
+</nav>
 
 <div class="main-area">
 
