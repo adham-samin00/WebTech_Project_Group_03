@@ -24,3 +24,22 @@ body {
     font-weight: 700;
     text-decoration: none;
 }
+.sitename span { 
+    color: #e8a838; }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+}
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+}
