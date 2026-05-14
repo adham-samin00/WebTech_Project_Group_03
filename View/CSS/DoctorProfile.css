@@ -26,4 +26,18 @@ body{
     text-decoration:none;
 }
 
-.sitename span{color:#e8a838;}
+.sitename span{
+    color:#e8a838;
+}
+.nav-links,
+.nav-right{
+    display:flex;
+    align-items:center;
+}
+.nav-links{
+    list-style:none;
+    gap:4px;
+}
+
+.nav-right{
+    gap:14px;}
