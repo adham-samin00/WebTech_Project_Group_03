@@ -8,8 +8,7 @@ include "../Controller/MyAppointmentsController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Appointments - MediBook</title>
-    <!-- <link rel="stylesheet" href="style.css">
-    <script src="../Controller/JS/CancelAppointment.js"></script> -->
+    <script src="../Controller/JS/CancelAppointment.js"></script>
 </head>
 <body>
 <div class="topnav">
