@@ -273,3 +273,30 @@ body {
     color: #444;
     vertical-align: middle;
 }
+.doctor-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.doctor-photo-sm {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e6f4f1;
+}
+.doctor-photo-placeholder {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
