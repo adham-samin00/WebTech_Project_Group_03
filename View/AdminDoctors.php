@@ -199,7 +199,7 @@
                         <th>ID</th>
                         <th>Doctor</th>
                         <th>Specialization</th>
-                        <th>Fee (BDT)</th>
+                        <th>Fee(BDT)</th>
                         <th>Available Days</th>
                         <th>Status</th>
                         <th>Appointments</th>
