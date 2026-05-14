@@ -8,11 +8,6 @@
         "role": "patient"
     },
     {
-        "name": "smi",
-        "email": "sm@gmail.com",
-        "dob": "2026-05-13",
-        "blood-group": "A+",
-        "phone": "01819922348",
         "name": "Ahnaf Tanvir",
         "email": "abcde@gmail.com",
         "dob": "2026-05-11",
@@ -26,6 +21,14 @@
         "dob": "2026-05-05",
         "blood-group": "A-",
         "phone": "01300834752",
+        "role": "patient"
+    },
+    {
+        "name": "Al Rahit",
+        "email": "rahit@gmail.com",
+        "dob": "2026-05-14",
+        "blood-group": "O+",
+        "phone": "01234567891",
         "role": "patient"
     }
 ]
