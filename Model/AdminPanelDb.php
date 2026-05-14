@@ -7,7 +7,7 @@ function getAllUsers()
 {
     $database = new db();
     $connection = $database->connection();
-    $sql    = "SELECT id, name, email, role, is_active, created_at FROM users ORDER BY created_at DESC";
+    $sql    = "SELECT id, name, email, role, is_active, created_at FROM users WHERE role != 'admin' ORDER BY created_at DESC;";
     $result = $connection->query($sql);
     return $result;
 }
