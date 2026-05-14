@@ -173,5 +173,8 @@ body {
 .grey-btn:hover {
     background-color: #e0e0e0;
 }
-
+@media (max-width: 500px) {
+    .confirm-btns { flex-direction: column; }
+    .confirm-box { padding: 28px 20px; }
+}
 
