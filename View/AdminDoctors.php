@@ -8,11 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src ="../Controller/JS/getCount.js"></script>
+    <link rel="stylesheet" href="../View/CSS/AdminDoctors.css">
     <title>Doctors</title>
 </head>
 <body>
     <nav class="navbar">
-        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
+        <a href="AdminPanel.php" class="sitename"><span>Medi</span>Book</a>
         <div class = "navmid">
             <ul>
                 <li><a href="AdminPanel.php">Users</a></li>
@@ -28,8 +29,10 @@
     </nav>
     <div class = "page-wrapper">
         <div class = "page-top">
-            <h1 class = "title">Doctor Management</h1>
-            <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
+            <div>
+                <h1 class = "title">Doctor Management</h1>
+                <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
+            </div>
             <?php if ($action != "add" && $action != "edit") { ?>
                 <a href="AdminDoctors.php?action=add" class="btn-add">+ Add Doctor</a>
             <?php } ?>
@@ -196,7 +199,7 @@
                         <th>ID</th>
                         <th>Doctor</th>
                         <th>Specialization</th>
-                        <th>Fee (BDT)</th>
+                        <th>Fee(BDT)</th>
                         <th>Available Days</th>
                         <th>Status</th>
                         <th>Appointments</th>
