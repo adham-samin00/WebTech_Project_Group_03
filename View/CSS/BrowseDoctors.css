@@ -105,4 +105,15 @@ body{
     font-size:12px;
     font-weight:600;
 }
+.filter-bar select{
+    min-width:210px;
+    padding:8px 13px;
+    border:1.5px solid #ddd;
+    border-radius:7px;
+    outline:none;
+    font:13px 'Poppins',sans-serif;
+}
 
+.filter-bar select:focus{
+    border-color:#1a6b5a;
+}
