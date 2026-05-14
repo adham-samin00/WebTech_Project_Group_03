@@ -25,7 +25,7 @@ function saveAppointment( $patient_id, $doctor_id, $date, $time, $reason)
             }
         return false;
     }
-function getDoctorById($connection, $doctor_id)
+function getDoctorById( $doctor_id)
     {      
         $database   = new db();
          $connection = $database->connection();
