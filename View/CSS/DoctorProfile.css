@@ -132,3 +132,28 @@ body{
     background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
     color:#fff;
 }
+
+.appt-table th,
+.appt-table td{
+    padding:12px 14px;
+    text-align:left;
+}
+
+.appt-table th{
+    font-size:11px;
+    text-transform:uppercase;
+}
+
+.appt-table td{
+    font-size:13px;
+    color:#444;
+}
+
+.appt-table tbody tr{
+    border-bottom:1px solid #f0f0f0;
+    transition:.15s;
+}
+
+.appt-table tbody tr:hover{
+    background:#f7faf9;
+}
