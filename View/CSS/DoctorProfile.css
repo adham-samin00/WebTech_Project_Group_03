@@ -41,3 +41,20 @@ body{
 
 .nav-right{
     gap:14px;}
+    .nav-links a,
+.logout-btn{
+    color:#fff;
+    font-size:13px;
+    padding:7px 14px;
+    border-radius:6px;
+    text-decoration:none;
+    transition:.2s;
+}
+
+.nav-links a{
+    color:rgba(255,255,255,.8);
+}
+.nav-links a:hover{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+}
