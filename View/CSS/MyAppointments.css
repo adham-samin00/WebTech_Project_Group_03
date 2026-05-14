@@ -96,3 +96,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+.title-pending   {
+     background-color: #fff3cd; color: #856404; }
+.title-confirmed {
+     background-color: #e6f4f1; color: #1a6b5a; }
+.title-completed {
+background-color: #e8f7ef; color: #1e8449; }
+.title-cancelled {
+     background-color: #f0f0f0; color: #888; 
+    }
+.title-noshow    { 
+    background-color: #fdecea; color: #c0392b; 
+}
