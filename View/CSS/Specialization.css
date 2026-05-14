@@ -167,12 +167,6 @@ body{
     gap:12px;
     margin-top:6px;
 }
-.btn-cancel-link{
-    color:#999;
-    font-size:13px;
-    text-decoration:none;
-    font-weight:500;
-}
 .btn-cancel-link:hover{
     color:#555;
     text-decoration:underline;
@@ -204,4 +198,39 @@ body{
     font-size:13px;
     color:#444;
 }
-
+.table-wraper tbody tr{
+    border-bottom:1px solid #f0f0f0;
+    transition:.15s;
+}
+.table-wraper tbody tr:hover{
+    background:#f7faf9;
+}
+.action-buttons{
+    display:flex;
+    gap:8px;
+}
+.btn-edit,
+.btn-delete{
+    padding:5px 12px;
+    border-radius:6px;
+    font-size:12px;
+    border:1.5px solid;
+}
+.btn-edit{
+    background:#fff3cd;
+    color:#856404;
+    border-color:#e8a838;
+}
+.btn-edit:hover{
+    background:#e8a838;
+    color:#fff;
+}
+.btn-delete{
+    background:#fdecea;
+    color:#c0392b;
+    border-color:#c0392b;
+}
+.btn-delete:hover{
+    background:#c0392b;
+    color:#fff;
+}

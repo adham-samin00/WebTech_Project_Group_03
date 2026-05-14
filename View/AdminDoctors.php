@@ -8,11 +8,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src ="../Controller/JS/getCount.js"></script>
+    <link rel="stylesheet" href="../View/CSS/AdminDoctors.css">
     <title>Doctors</title>
 </head>
 <body>
     <nav class="navbar">
-        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
+        <a href="AdminPanel.php" class="sitename"><span>Medi</span>Book</a>
         <div class = "navmid">
             <ul>
                 <li><a href="AdminPanel.php">Users</a></li>
