@@ -58,3 +58,15 @@ body{
     background:rgba(255,255,255,.15);
     color:#fff;
 }
+.nav-right p{
+    color:rgba(255,255,255,.85);
+    font-size:13px;
+}
+
+.logout-btn{
+    border:1.5px solid rgba(255,255,255,.6);
+}
+.logout-btn:hover{
+    background:#fff;
+    color:#1a6b5a;
+}
