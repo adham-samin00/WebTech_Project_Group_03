@@ -152,3 +152,6 @@ background-color: #e8f7ef; color: #1e8449; }
 .tag-pending   {
      background-color: #fff3cd; color: #856404; 
     }
+    .tag-confirmed {
+         background-color: #e6f4f1; color: #1a6b5a;
+         }
