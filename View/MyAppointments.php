@@ -8,8 +8,7 @@ include "../Controller/MyAppointmentsController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Appointments - MediBook</title>
-    <!-- <link rel="stylesheet" href="style.css">
-    <script src="../Controller/JS/CancelAppointment.js"></script> -->
+    <script src="../Controller/JS/CancelAppointment.js"></script>
 </head>
 <body>
 <div class="topnav">
@@ -17,6 +16,7 @@ include "../Controller/MyAppointmentsController.php";
     <ul class="nav-links">
         <li><a href="BrowseDoctors.php">Find a Doctor</a></li>
         <li><a href="MyAppointments.php">My Appointments</a></li>
+        <li><a href="PatientHome.php">Home</a></li>
     </ul>
     <div class="nav-right">
         <p><?php echo htmlspecialchars($_SESSION["name"]); ?></p>

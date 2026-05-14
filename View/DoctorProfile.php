@@ -7,8 +7,7 @@ include "../Controller/DoctorProfileController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($doctor["name"]); ?> - MediBook</title>
-    <!-- <link rel="stylesheet" href="style.css">
-    <script src="../Controller/JS/LoadSlots.js"></script> -->
+    <script src="../Controller/JS/LoadSlots.js"></script>
 </head>
 <body>
     <div class="topnav">
@@ -16,6 +15,7 @@ include "../Controller/DoctorProfileController.php";
     <ul class="nav-links">
         <li><a href="BrowseDoctors.php">Find a Doctor</a></li>
         <li><a href="MyAppointments.php">My Appointments</a></li>
+        <li><a href="PatientHome.php">Home</a></li>
     </ul>
      <div class="nav-right">
         <p><?php
@@ -91,7 +91,7 @@ include "../Controller/DoctorProfileController.php";
             { ?>
         <h3>Your Details</h3>
 
-        <form method="post" action="BookingConfirmation.php">
+        <form method="post" action="">
             <input type="hidden" name="doctor_id" id="doctor_id" value="<?php echo $doctor["id"]; ?>">
             <input type="hidden" name="date" id="selected_date" value="">
             <input type="hidden" name="time" id="selected_time" value="">
@@ -99,22 +99,21 @@ include "../Controller/DoctorProfileController.php";
             <div class="two-col">
                 <div class="input-group">
                     <label>Selected Date</label>
-                    <input type="text" id="show-date" placeholder="Choose a date above" readonly>
+                    <input type="text" id="show-date" name="show-date" placeholder="Choose a date above" readonly>
                 </div>
                 <div class="input-group">
                     <label>Selected Time</label>
-                    <input type="text" id="show-time" placeholder="Choose a slot above" readonly>
+                    <input type="text" id="show-time" name="show-time" placeholder="Choose a slot above" readonly>
                 </div>
             </div>
     
-<div class="input-group">
+            <div class="input-group">
                 <label for="reason">Reason for Visit</label>
                 <textarea id="reason" name="reason"
                           placeholder="Describe your symptoms or reason for the visit..." required></textarea>
             </div>
 
-            <input type="submit" class="submit-btn" value="Book Appointment"
-                   onclick="return checkBeforeBook()">
+            <input type="submit" class="submit-btn" value="Book Appointment">
 
         </form>
         <?php } 
@@ -127,19 +126,19 @@ include "../Controller/DoctorProfileController.php";
 <script>
 const origLoadSlots = LoadSlots;
 LoadSlots = function(dateStr, btn)
- {
+{
     origLoadSlots(dateStr, btn);
     document.getElementById("show-date").value = btn.textContent.trim();
 };
 
-function checkBeforeBook() 
-{
-    let date = document.getElementById("selected_date").value;
-    let time = document.getElementById("selected_time").value;
-    if (!date) { alert("Please select a date first."); return false; }
-    if (!time) { alert("Please select a time slot."); return false; }
-    return true;
-}
+// function checkBeforeBook() 
+// {
+//     let date = document.getElementById("selected_date").value;
+//     let time = document.getElementById("selected_time").value;
+//     if (!date) { alert("Please select a date first."); return false; }
+//     if (!time) { alert("Please select a time slot."); return false; }
+//     return true;
+// }
 </script>
 
 </body>
