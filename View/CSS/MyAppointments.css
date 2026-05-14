@@ -163,3 +163,19 @@ background-color: #e8f7ef; color: #1e8449; }
      .tag-noshow{ 
         background-color: #fdecea; color: #c0392b;
      }
+.cancel-btn {
+    background-color: #fdecea;
+    color: #c0392b;
+    border: 1.5px solid #c0392b;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+}
+.cancel-btn:hover {
+    background-color: #c0392b;
+    color: white;
+}
