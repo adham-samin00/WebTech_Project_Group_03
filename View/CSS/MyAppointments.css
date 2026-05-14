@@ -191,3 +191,6 @@ background-color: #e8f7ef; color: #1e8449; }
     text-decoration: none;
     transition: opacity 0.2s;
 }
+.book-more-link:hover {
+    opacity: 0.9;
+}
