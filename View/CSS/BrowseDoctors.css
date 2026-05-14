@@ -117,3 +117,21 @@ body{
 .filter-bar select:focus{
     border-color:#1a6b5a;
 }
+.doctors-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+    gap:20px;
+}
+
+.doc-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.doc-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 24px rgba(0,0,0,.12);
+}
