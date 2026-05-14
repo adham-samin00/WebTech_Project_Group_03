@@ -174,4 +174,13 @@ body{
     background:#c0392b;
     color:#fff;
 }
+.book-more-link{
+    display:inline-block;
+    margin-top:14px;
+    padding:10px 22px;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
+}
 
+.book-more-link:hover{opacity:.9;}
