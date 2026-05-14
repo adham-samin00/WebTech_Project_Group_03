@@ -89,3 +89,21 @@ body {
     font-size: 13px;
     color: #999;
 }
+.btn-add {
+    display: inline-block;
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity 0.2s, transform 0.1s;
+}
+.btn-add:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
