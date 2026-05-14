@@ -88,4 +88,22 @@ body{
 }
 .appt-section{
     margin-bottom:32px;}
+    .group-title,
+.status-tag{
+    display:inline-block;
+    font-weight:600;
+}
+
+.group-title{
+    padding:5px 14px;
+    border-radius:6px;
+    font-size:12px;
+    margin-bottom:12px;
+    text-transform:uppercase;
+}
+.status-tag{
+    padding:3px 10px;
+    border-radius:20px;
+    font-size:11px;
+}
 
