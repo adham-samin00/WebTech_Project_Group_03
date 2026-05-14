@@ -13,7 +13,7 @@
     $success = "";
     $action  = $_GET["action"] ?? "list";
     $edit_id = intval($_GET["id"] ?? 0);
-
+    $datafile = "../JSON/DoctorInfo.json";
     $weekdays = ["Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
     if($_SERVER["REQUEST_METHOD"] == "POST")
         {
@@ -94,6 +94,22 @@
                                         $new_user_id   = createDoctorUser($name, $email, $password_hash);
                                         if ($new_user_id)
                                             {
+                                                $formdata = array("id" =>$new_user_id,"name"=>$name, "email"=>$email,"Password" => $password_hash, "Specialization" => $specializations_id,"Bio" => $bio);
+                                                if(file_exists($datafile))
+                                                    {
+                                                        $existdata = file_get_contents($datafile);
+                                                        $tempdata = json_encode($existdata,true);
+                                                    }
+                                                    else{
+                                                        $tempdata = array();
+                                                    }
+                                                if(!is_array($tempdata))
+                                                    {
+                                                        $tempdata = array();
+                                                    }
+                                                    $tempdata[] = $formdata;
+                                                    $jsondata = json_encode($tempdata,JSON_PRETTY_PRINT);
+                                                    file_put_contents($datafile,$jsondata);
                                                 $result = createDoctor($new_user_id, $specialization_id, $bio, $consultation_fee, $photo_path, $available_days);
                                                 if ($result)
                                                     {
@@ -149,7 +165,29 @@
                         {
                             updateDoctorUser($update_user_id, $name, $email);
                             $result = updateDoctor($update_doctor_id, $specialization_id, $bio, $consultation_fee, $photo_path, $available_days);
-
+                            $formdata = array("id" =>$update_user_id,"name"=>$name, "email"=>$email,"Password" => $password_hash, "Specialization" => $specializations_id,"Bio" => $bio);
+                            if(file_exists($datafile))
+                                {
+                                    $existdata = file_get_contents($datafile);
+                                    $tempdata = json_decode($existdata, true);
+                                }
+                                else{
+                                    $tempdata = array();
+                                }
+                            if(!is_array($tempdata))
+                                {
+                                    $tempdata = array();
+                                }
+                                foreach($tempdata as $index => $record)
+                                {
+                                    if($record["id"] === $update_user_id)
+                                        {
+                                           $tempdata[$index] = $formdata;
+                                            break;
+                                        }
+                                }
+                                $jsondata = json_encode($tempdata,JSON_PRETTY_PRINT);
+                                file_put_contents($datafile,$jsondata);
                             if ($result !== false)
                                 {
                                     Header("Location: ../View/AdminDoctors.php?success=updated");

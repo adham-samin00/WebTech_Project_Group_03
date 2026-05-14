@@ -52,7 +52,7 @@
         ?>
         <?php if($action == "add"){ ?>
             <div class = "add_form">
-                <form method="post" action="../Controller/AdminDoctorController.php" enctype="multipart/form-data">
+                <form method="post" action="" enctype="multipart/form-data">
                     <input type="hidden" name = "action" value = "create">
                     <div class="form-row">
                         <div class="form-group">
