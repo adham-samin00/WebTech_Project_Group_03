@@ -68,3 +68,31 @@ body {
     background-color: white;
     color: #1a6b5a;
 }
+.main-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: calc(100vh - 60px);
+}
+.confirm-box {
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px 35px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.confirm-box h2 {
+    color: #1a6b5a;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.confirm-box p {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
