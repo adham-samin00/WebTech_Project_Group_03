@@ -187,3 +187,11 @@ body{
     font-size:12px;
     margin-bottom:14px;
 }
+.view-btn{
+    background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
+    color:#fff;
+    padding:7px 18px;
+    font-size:12px;
+    font-weight:600;
+    display:inline-block;
+}
