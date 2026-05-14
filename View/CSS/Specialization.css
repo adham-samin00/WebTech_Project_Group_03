@@ -74,4 +74,34 @@ body{
     background:#fff;
     color:#1a6b5a;
 }
-
+.page-toprow{
+    margin:30px auto 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:12px;
+}
+.title{
+    font-size:22px;
+    font-weight:700;
+    color:#1a6b5a;
+}
+.subtitle{
+    font-size:13px;
+    color:#999;
+}
+.btn-add{
+    display:inline-block;
+    background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
+    color:#fff;
+    padding:9px 20px;
+    border:none;
+    border-radius:8px;
+    font-size:13px;
+    cursor:pointer;
+}
+.btn-add:hover{
+    opacity:.9;
+    transform:translateY(-1px);
+}
