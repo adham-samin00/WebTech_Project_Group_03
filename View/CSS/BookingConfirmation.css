@@ -141,5 +141,37 @@ body {
 .tag-pending {
     background-color: #fff3cd; color: #856404;
  }
+.confirm-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.green-btn {
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+.green-btn:hover {
+    opacity: 0.9;
+}
+.grey-btn {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.grey-btn:hover {
+    background-color: #e0e0e0;
+}
 
 
