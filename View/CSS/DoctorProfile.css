@@ -106,4 +106,16 @@ body{
     border-radius:20px;
     font-size:11px;
 }
-
+.title-pending,.tag-pending{
+    background:#fff3cd;color:#856404;
+}
+.title-confirmed,.tag-confirmed{
+    background:#e6f4f1;color:#1a6b5a;}
+.title-completed,.tag-completed{
+    background:#e8f7ef;color:#1e8449;
+}
+.title-cancelled,.tag-cancelled{
+    background:#f0f0f0;color:#888;}
+.title-noshow,.tag-noshow{
+    background:#fdecea;color:#c0392b;
+}
