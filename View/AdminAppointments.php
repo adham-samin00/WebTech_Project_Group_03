@@ -12,11 +12,12 @@ include "../Controller/AdminAppointmentsController.php";
 <body>
 
 <nav class="navbar">
-        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
+        <a href="AdminPanel.php" class="sitename"><span>Medi</span>Book</a>
         <ul>
             <li><a href="AdminPanel.php">Users</a></li>
             <li><a href="Specializations.php">Specialization</a></li>
             <li><a href="AdminDoctors.php">Doctors</a></li>
+            <li><a href = "AdminAppointments.php">Appointments</a></li>
         </ul>
         <a href="../Controller/Logout.php" class = "logout-btn">Logout</a>
 </nav>
