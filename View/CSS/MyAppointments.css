@@ -155,8 +155,11 @@ background-color: #e8f7ef; color: #1e8449; }
     .tag-confirmed {
          background-color: #e6f4f1; color: #1a6b5a;
          }
-         .tag-completed {
+         .tag-completed{
              background-color: #e8f7ef; color: #1e8449;
              }
-.tag-cancelled {
+.tag-cancelled{
      background-color: #f0f0f0; color: #888; }
+     .tag-noshow{ 
+        background-color: #fdecea; color: #c0392b;
+     }
