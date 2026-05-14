@@ -51,3 +51,13 @@ body{
     background:rgba(255,255,255,.15);
     color:#fff;
 }
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.nav-right p{
+    color:rgba(255,255,255,.85);
+    font-size:13px;
+}
