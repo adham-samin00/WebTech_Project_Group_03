@@ -121,3 +121,24 @@ background-color: #e8f7ef; color: #1e8449; }
     color: white;
 }
 
+.appt-table thead th {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.appt-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s;
+}
+.appt-table tbody tr:hover {
+    background-color: #f7faf9;
+}
+.appt-table tbody td {
+    padding: 11px 14px;
+    font-size: 13px;
+    color: #444;
+    vertical-align: middle;
+}
