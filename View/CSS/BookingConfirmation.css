@@ -10,3 +10,20 @@ body {
     min-height: 100vh;
     color: #333;
 }
+.topnav {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.sitename {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.sitename span { 
+    color: #e8a838; 
+}
