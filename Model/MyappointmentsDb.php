@@ -13,5 +13,14 @@ function getMyAppointments( $patient_id)
         $result = $statement->get_result();
         return $result;
     }
-
+function cancelAppointment($appointment_id, $patient_id)
+    {
+        $database = new db();
+        $connection = $database->connection();
+        $sql = "UPDATE appointments SET status = 'Cancelled'  WHERE id = ? AND patient_id = ? AND status = 'Pending'";
+        $statement = $connection->prepare($sql);
+        $statement->bind_param("ii", $appointment_id, $patient_id);
+        $statement->execute();
+        return $connection->affected_rows;
+    }
 ?>

@@ -12,13 +12,30 @@ if (!$isLoggedIn || $_SESSION["role"] != "patient")
     }
 
 $doctor_id = intval($_GET["id"] ?? 0);
-
+$date = "";
+$time = "";
+$reason = "";
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $date = $_POST["date"];
+    $time = $_POST["show-time"];
+    $reason = $_POST["reason"];
+    if(!empty($date) && !empty($time) && !empty($reason)){
+        $result = saveAppointment($_SESSION["user_id"],$doctor_id,$date,$time,$reason);
+        if($result){
+            Header("Location: BookingConfirmation.php?id=".$result);
+            exit();
+        }
+        else{
+            Header("Location: BrowserDoctors.php");
+            exit();
+        }
+    }
+}
 if (!$doctor_id)
     {
         Header("Location: BrowseDoctors.php");
         exit();
     }
-
 
 $result = getDoctorById( $doctor_id);
 $doctor = $result->fetch_assoc();

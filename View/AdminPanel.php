@@ -8,20 +8,20 @@ include "../Controller/AdminController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - MediBook</title>
+    <link rel="stylesheet" href="AdminPanel.css">
     <script src="../Controller/JS/ToggleActive.js"></script>
 </head>
 
 <body>
-        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
-        <ul>
+
+    <div class="topnav">
+        <a href="AdminPanel.php" class="sitename"><span>Medi</span>Book</a>
+            <ul>
             <li><a href="AdminPanel.php">Users</a></li>
             <li><a href="Specializations.php">Specialization</a></li>
             <li><a href="AdminDoctors.php">Doctors</a></li>
             <li><a href = "AdminAppointments.php">Appointments</a></li>
         </ul>
-
-    <div class="topnav">
-        <a href="AdminPanel.php" class="sitename">+<span>Medi</span>Book</a>
         <div class="nav-right">
             <p>Admin: <?php echo htmlspecialchars($_SESSION["name"]); ?></p>
             <a href="../Controller/Logout.php" class="logout-btn">Logout</a>
@@ -62,7 +62,7 @@ include "../Controller/AdminController.php";
                         <td><?php echo htmlspecialchars($row["name"]); ?></td>
                         <td><?php echo htmlspecialchars($row["email"]); ?></td>
                         <td><span class="badge-role"><?php echo htmlspecialchars($row["role"]); ?></span></td>
-                        <td><span class="<?php echo $badge_cls; ?>"><?php echo $badge_text; ?></span></td>
+                        <td><span class="status-badge <?php echo $badge_cls; ?>"><?php echo $badge_text; ?></span></td>
                         <td><?php echo $created; ?></td>
                         <td>
                             <button class="<?php echo $btn_class; ?>" onclick="toggleActive(<?php echo $user_id; ?>, this)">

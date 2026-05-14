@@ -16,14 +16,14 @@ function toggleActive(userId, btn)
                         if(response.is_active == 1) 
                             {
                                 btn.textContent   = "Deactivate";
-                                btn.className     = "btn-deactivate";
+                                btn.className = "btn-off";
                                 badge.textContent = "Active";
                                 badge.className   = "status-badge active";
                             }                         
                         else 
                             {
                                 btn.textContent   = "Activate";
-                                btn.className     = "btn-activate";
+                                btn.className = "btn-on";
                                 badge.textContent = "Inactive";
                                 badge.className   = "status-badge inactive";
                             }
