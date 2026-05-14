@@ -119,3 +119,16 @@ body{
 .title-noshow,.tag-noshow{
     background:#fdecea;color:#c0392b;
 }
+.appt-table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 10px rgba(0,0,0,.07);
+}
+
+.appt-table thead{
+    background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
+    color:#fff;
+}
