@@ -135,3 +135,15 @@ body{
     transform:translateY(-4px);
     box-shadow:0 8px 24px rgba(0,0,0,.12);
 }
+.doc-card-top,
+.doc-photo,
+.doc-initial{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.doc-card-top{
+    height:110px;
+    background:linear-gradient(135deg,#e6f4f1,#c8e6df);
+}
