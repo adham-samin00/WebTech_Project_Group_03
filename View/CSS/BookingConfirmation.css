@@ -106,3 +106,29 @@ body {
     margin-bottom: 22px;
     border: 1px solid #b2d8cf;
 }
+.confirm-details {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.confirm-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+.confirm-row:last-child {
+    border-bottom: none;
+}
+.confirm-row span:first-child {
+    color: #999;
+    font-weight: 600;
+}
+.confirm-row span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
