@@ -147,3 +147,22 @@ body{
     height:110px;
     background:linear-gradient(135deg,#e6f4f1,#c8e6df);
 }
+.doc-photo,
+.doc-initial{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    border:3px solid #fff;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+.doc-photo{
+    object-fit:cover;
+}
+
+.doc-initial{
+    background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+}
