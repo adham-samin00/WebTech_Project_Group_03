@@ -177,3 +177,31 @@ body{
     color:#555;
     text-decoration:underline;
 }
+.table-wraper{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    margin:20px auto;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+.table-wraper thead{
+    background:linear-gradient(135deg,#1a6b5a,#2d9b7f);
+    color:#fff;
+}
+.table-wraper th,
+.table-wraper td{
+    padding:12px 16px;
+    text-align:left;
+}
+.table-wraper th{
+    font-size:14px;
+    font-weight:600;
+    text-transform:uppercase;
+}
+.table-wraper td{
+    font-size:13px;
+    color:#444;
+}
+
