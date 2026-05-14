@@ -47,7 +47,7 @@ function getAllAppointments($doctor_filter, $date_filter, $status_filter)
 
     function getAllDoctors()
     {
-         $database = new db();
+        $database = new db();
         $connection=$database->connection();
         $sql    = "SELECT d.id, u.name FROM doctors d JOIN users u ON d.user_id = u.id ORDER BY u.name ASC";
         $result = $connection->query($sql);

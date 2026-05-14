@@ -1,12 +1,7 @@
 <?php
 include "../Model/RegistrationDb.php";
 session_start();
-$isLoggedIn = $_SESSION["loggedIn"] ?? false;
-    if (!$isLoggedIn || $_SESSION["role"] != "admin")
-        {
-            Header("Location: ../View/Login.php");
-            exit();
-        }
+
 $name        = "";
 $email       = "";
 $dob         = "";
@@ -26,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Name must be at least 3 characters";
     } 
     else if (empty($email) || ! preg_match("/^[a-zA-Z0-9._]+@[a-zA-Z0-9.]+\.[a-zA-Z]{2,}$/", $email)) {
-        $error = "Please enter a valid emaail";
+        $error = "Please enter a valid email";
     } 
     else if (strlen($password) < 6) {
         $error = "Password must be at least 6 characters";
