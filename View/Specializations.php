@@ -9,11 +9,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../View/CSS/Specialization.css">
     <title>Doctor Specializations</title>
 </head>
 <body>
     <nav class="navbar">
-        <a href="AdminPanel.php" class = "navbar-logo">CareCraft</a>
+        <a href="AdminPanel.php" class="sitename"><span>Medi</span>Book</a>
         <div class = "navmid">
             <ul>
                 <li><a href="AdminPanel.php">Users</a></li>
@@ -43,9 +44,11 @@
         if ($msg) echo "<div class='alert alert-success'>$msg</div>";
     } ?>
 
-    <?php if(!empty($error)){ ?>
-        <div class = "error-alert"><?php echo $error ?></div>
-    <?php } ?>
+    <?php if (isset($_GET["error"])) {
+        $errorMsgs = ["has_doctors" => "Cannot delete: doctors are assigned to this specialization."];
+        $errMsg = $errorMsgs[$_GET["error"]] ?? "";
+        if ($errMsg) echo "<div class='error-alert'>$errMsg</div>";
+    } ?>
     <?php if($action == "add"){?>
         <div class = "add_form">
             <p class ="form-title">Add New Specialization</p>
