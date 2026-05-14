@@ -105,3 +105,20 @@ body{
     opacity:.9;
     transform:translateY(-1px);
 }
+.alert-success,
+.error-alert{
+    margin:18px auto;
+    padding:10px 14px 10px 20px;
+    border-radius:8px;
+    font-size:13px;
+}
+.alert-success{
+    background:#e8f7ef;
+    color:#1e8449;
+    border-left:4px solid #1e8449;
+}
+.error-alert{
+    background:#fdecea;
+    color:#c0392b;
+    border-left:4px solid #c0392b;
+}
