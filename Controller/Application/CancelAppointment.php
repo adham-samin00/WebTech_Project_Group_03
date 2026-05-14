@@ -1,5 +1,5 @@
 <?php
-include "../Model/MyappointmentsDb.php";
+include "../../Model/MyappointmentsDb.php";
 session_start();
 
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;
