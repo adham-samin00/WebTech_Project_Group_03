@@ -96,34 +96,35 @@
     }
     if($action == "delete" && $edit_id)
         {
-            if(file_exists($datafile))
-                {
-                    $existdata = file_get_contents($datafile);
-                    $tempdata = json_decode($existdata, true);
-                }
-                else{
-                    $tempdata = array();
-                }
-            if(!is_array($tempdata))
-                {
-                    $tempdata = array();
-                }
-                foreach($tempdata as $index => $record)
-                {
-                    if($record["Specialization"] === $edit_data)
-                        {
-                            unset($tempdata[$index]);
-                            $tempdata = array_values($tempdata);
-                            break;
-                        }
-                }
-                $jsondata = json_encode($tempdata,JSON_PRETTY_PRINT);
-                file_put_contents($datafile,$jsondata);
             $hasDoctor = specializationHasDoctors($edit_id);
             if($hasDoctor->num_rows > 0){
-                $error = "Cannot Delete: doctors are assigned to this specialization.";
+                Header("Location: ../View/Specializations.php?error=has_doctors");
+            exit();
             }
             else{
+                if(file_exists($datafile))
+                    {
+                        $existdata = file_get_contents($datafile);
+                        $tempdata = json_decode($existdata, true);
+                    }
+                    else{
+                        $tempdata = array();
+                    }
+                if(!is_array($tempdata))
+                    {
+                        $tempdata = array();
+                    }
+                    foreach($tempdata as $index => $record)
+                    {
+                        if($record["Specialization"] === $edit_data)
+                            {
+                                unset($tempdata[$index]);
+                                $tempdata = array_values($tempdata);
+                                break;
+                            }
+                    }
+                $jsondata = json_encode($tempdata,JSON_PRETTY_PRINT);
+                file_put_contents($datafile,$jsondata);
                 $result = deleteSpecialization($edit_id);
                 if ($result)
                     {
