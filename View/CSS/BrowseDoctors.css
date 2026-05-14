@@ -25,3 +25,29 @@ body{
     font-weight:700;
     text-decoration:none;
 }
+
+.sitename span{
+    color:#e8a838;
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:4px;
+}
+.nav-links a,
+.logout-btn,
+.view-btn{
+    text-decoration:none;
+    border-radius:6px;
+    transition:.2s;
+}
+.nav-links a{
+    color:rgba(255,255,255,.8);
+    padding:7px 14px;
+    font-size:13px;
+    font-weight:500;
+}
+.nav-links a:hover{
+    background:rgba(255,255,255,.15);
+    color:#fff;
+}
