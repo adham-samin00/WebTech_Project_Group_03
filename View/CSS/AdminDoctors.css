@@ -66,3 +66,26 @@ body {
     background-color: white;
     color: #1a6b5a;
 }
+.page-wrapper {
+    max-width: 1050px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.page-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a6b5a;
+    margin-bottom: 3px;
+}
+.subtitle {
+    font-size: 13px;
+    color: #999;
+}

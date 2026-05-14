@@ -29,8 +29,10 @@
     </nav>
     <div class = "page-wrapper">
         <div class = "page-top">
-            <h1 class = "title">Doctor Management</h1>
-            <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
+            <div>
+                <h1 class = "title">Doctor Management</h1>
+                <p class = "subtitle">Add, edit, and manage doctor profiles and weekly avilability</p>
+            </div>
             <?php if ($action != "add" && $action != "edit") { ?>
                 <a href="AdminDoctors.php?action=add" class="btn-add">+ Add Doctor</a>
             <?php } ?>
