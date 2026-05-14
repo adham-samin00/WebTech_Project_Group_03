@@ -61,3 +61,14 @@ body{
     color:rgba(255,255,255,.85);
     font-size:13px;
 }
+.logout-btn{
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,.6);
+    padding:6px 14px;
+    font-size:13px;
+}
+
+.logout-btn:hover{
+    background:#fff;
+    color:#1a6b5a;
+}
