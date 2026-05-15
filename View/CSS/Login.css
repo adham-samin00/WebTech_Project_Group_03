@@ -113,7 +113,7 @@ body {
 }
  
 .submit-btn:hover {
-    opacity: 0.92;
+    opacity: 0.80;
     transform: translateY(-1px);
 }
 
@@ -135,4 +135,21 @@ body {
     font-size: 13px;
     margin-bottom: 18px;
     border-left: 4px solid #1e8449;
+}
+
+.bottom-link {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 13px;
+    color: #888;
+}
+ 
+.bottom-link a {
+    color: #1a6b5a;
+    font-weight: 600;
+    text-decoration: none;
+}
+ 
+.bottom-link a:hover {
+    text-decoration: underline;
 }
