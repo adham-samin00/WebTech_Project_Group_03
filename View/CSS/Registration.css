@@ -27,3 +27,14 @@ body {
     text-decoration: none;
     letter-spacing: 0.5px;
 }
+
+.sitename span {
+    color: #e8a838;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px 50px;
+}
