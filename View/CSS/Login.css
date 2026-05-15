@@ -117,3 +117,22 @@ body {
     transform: translateY(-1px);
 }
 
+.msg-error {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    border-left: 4px solid #c0392b;
+}
+ 
+.msg-success {
+    background-color: #e8f7ef;
+    color: #1e8449;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    margin-bottom: 18px;
+    border-left: 4px solid #1e8449;
+}
