@@ -164,7 +164,3 @@ body {
     text-decoration: underline;
 }
 
-@media (max-width: 500px) {
-    .two-col { grid-template-columns: 1fr; }
-    .form-box { padding: 28px 20px; }
-}
