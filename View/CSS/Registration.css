@@ -63,3 +63,27 @@ body {
     margin-bottom: 28px;
 }
 
+.input-group {
+    margin-bottom: 16px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
