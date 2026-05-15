@@ -1,10 +1,10 @@
 [
     {
-        "id": 22,
-        "name": "Ameya",
-        "email": "amea@gmail.com",
-        "Password": "$2y$10$cYVS0ety8LDatBrFvvdH1uNoqcvYjfqzrJXzQb1L0fMEHFT1G9RJW",
+        "id": 9,
+        "name": "Dr Siam",
+        "email": "siamdr@medibook.com",
+        "Password": "$2y$10$pRE6ZWZ7KrGuNyw0nxBRru6gUKy8HutLeLIrtFYpHUIepog.olkL6",
         "Specialization": null,
-        "Bio": "elachi hoy onek"
+        "Bio": "Completed MBBS and postgraduate on Cardiology specialist from DMC"
     }
 ]
