@@ -96,3 +96,24 @@ body {
     box-shadow: 0 0 0 3px rgba(26, 107, 90, 0.1);
     background-color: white;
 }
+
+.submit-btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity 0.2s, transform 0.1s;
+    letter-spacing: 0.3px;
+}
+ 
+.submit-btn:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
