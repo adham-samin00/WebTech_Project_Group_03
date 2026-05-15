@@ -31,7 +31,7 @@ function UpdateStatus(appointment_id, new_status, btn) {
         }
     };
 
-    xhttp.open("POST", "../Application/UpdateStatus.php", true);
+    xhttp.open("POST", "../Controller/Application/UpdateStatus.php", true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({ appointment_id: appointment_id, status: new_status }));
 }
