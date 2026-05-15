@@ -3,7 +3,7 @@
         "id": 9,
         "name": "Dr Siam",
         "email": "siamdr@medibook.com",
-        "Password": "$2y$10$pRE6ZWZ7KrGuNyw0nxBRru6gUKy8HutLeLIrtFYpHUIepog.olkL6",
+        "Password": null,
         "Specialization": null,
         "Bio": "Completed MBBS and postgraduate on Cardiology specialist from DMC"
     }
