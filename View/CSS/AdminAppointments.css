@@ -11,6 +11,16 @@ body {
     color: #333;
 }
 
+.sitename {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.sitename span {
+    color: #e8a838;
+}
 .navbar {
     background: linear-gradient(135deg, #0f4c35, #1a6b5a);
     padding: 0 30px;
