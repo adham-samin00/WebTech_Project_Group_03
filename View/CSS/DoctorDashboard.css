@@ -53,3 +53,8 @@ body {
     font-size: 13px;
     transition: all 0.2s;
 }
+
+.logout-btn:hover {
+    background-color: white;
+    color: #1a6b5a;
+}
