@@ -280,7 +280,6 @@ body {
     border-left-color: #c0392b;
 }
 
-/* ---- detail popup ---- */
 .detail-popup {
     display: none;
     position: fixed;
