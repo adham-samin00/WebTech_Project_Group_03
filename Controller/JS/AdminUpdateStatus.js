@@ -39,7 +39,7 @@ function AdminUpdateStatus(appointment_id, new_status, btn) {
         }
     };
 
-    xhttp.open("POST", "../Controller/Application/AdminUpdateStatus.php", true);
+    xhttp.open("POST", "../Application/AdminUpdateStatus.php", true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.send(JSON.stringify({ appointment_id: appointment_id, status: new_status }));
 }
