@@ -1,16 +1,10 @@
 [
     {
-        "id": 5,
-        "name": "Dr. Lt. Col. (Retd.) Ameya",
-        "email": "Ameya@gmail.com",
-        "Password": null,
+        "id": 12,
+        "name": "Kabir",
+        "email": "kabir@medibook.com",
+        "Password": "$2y$10$OkOeNezVYBRaY2FyEDM\/PujP5\/JOS7mcJs0IirnzJOQizoR7huava",
         "Specialization": null,
-        "Bio": "Cardiology Specialist specializing in preventive and advanced heart care | Committed to compassionate, evidence-based treatment | AIUB CSE graduate turned medical professional with international MBBS experience in the USA and UK | Former UK Army serviceman | Passionate about healthcare innovation through MediBook"
-        "id": 9,
-        "name": "Dr Siam",
-        "email": "siamdr@medibook.com",
-        "Password": null,
-        "Specialization": null,
-        "Bio": "Completed MBBS and postgraduate on Cardiology specialist from DMC"
+        "Bio": "MBBS and postgraduate from DMC"
     }
 ]

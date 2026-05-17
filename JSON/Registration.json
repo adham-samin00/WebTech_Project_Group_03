@@ -1,59 +1,10 @@
 [
     {
-        "name": "shafi",
-        "email": "shafi@gmail.com",
-        "dob": "2026-05-14",
-        "blood-group": "AB+",
-        "phone": "01917654432",
-        "role": "patient"
-    },
-    {
-        "name": "Ahnaf Tanvir",
-        "email": "abcde@gmail.com",
-        "dob": "2026-05-11",
+        "name": "Adham Samin",
+        "email": "adham1@gmail.com",
+        "dob": "2003-09-25",
         "blood-group": "B+",
-        "phone": "01300834752",
-        "role": "patient"
-    },
-    {
-        "name": "Ahnaf Tanvir Tasin",
-        "email": "abd@gmail.com",
-        "dob": "2026-05-05",
-        "blood-group": "A-",
-        "phone": "01300834752",
-        "role": "patient"
-    },
-    {
-        "name": "Al Rahit",
-        "email": "rahit@gmail.com",
-        "dob": "2026-05-14",
-        "blood-group": "O+",
-        "phone": "01234567891",
-        "role": "patient"
-    },
-    {
-<<<<<<< HEAD
-        "name": "Nahian",
-        "email": "nahian@gmail.com",
-        "dob": "2026-05-15",
-        "blood-group": "A+",
-        "phone": "01769696969",
-=======
-        "name": "Shafi",
-        "email": "ss@gmail.com",
-        "dob": "2026-05-22",
-        "blood-group": "B+",
-        "phone": "01300834752",
->>>>>>> 3cb8b8ce3adf80edbdb4363ba6504cadcf70478e
-        "role": "patient"
-    },
-
-    {
-        "name": "srijon",
-        "email": "srijon.dutta1@gmail.com",
-        "dob": "2026-05-01",
-        "blood-group": "A+",
-        "phone": "01998789878",
+        "phone": "01676022593",
         "role": "patient"
     }
 ]
