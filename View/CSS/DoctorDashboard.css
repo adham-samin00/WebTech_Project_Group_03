@@ -64,3 +64,10 @@ body {
     margin: 30px auto;
     padding: 0 20px;
 }
+
+.main-area h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a6b5a;
+    margin-bottom: 4px;
+}
