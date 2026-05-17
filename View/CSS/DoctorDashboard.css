@@ -297,3 +297,33 @@ body {
 .detail-popup.show {
     display: flex;
 }
+
+.popup-box {
+    background-color: white;
+    border-radius: 14px;
+    padding: 28px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    border-top: 4px solid #1a6b5a;
+}
+
+.popup-box h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a6b5a;
+    margin-bottom: 18px;
+}
+
+.popup-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.popup-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 4px;
+}
