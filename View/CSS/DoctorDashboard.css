@@ -176,3 +176,21 @@ body {
     font-family: 'Poppins', sans-serif;
     transition: all 0.2s;
 }
+
+.btn-complete:hover {
+    background-color: #1e8449;
+    color: white;
+}
+
+.btn-noshow {
+    background-color: #fdecea;
+    color: #c0392b;
+    border: 1.5px solid #c0392b;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+}
