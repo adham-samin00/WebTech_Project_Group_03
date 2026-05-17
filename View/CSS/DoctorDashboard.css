@@ -27,3 +27,7 @@ body {
     font-weight: 700;
     text-decoration: none;
 }
+
+.sitename span {
+    color: #e8a838;
+}
