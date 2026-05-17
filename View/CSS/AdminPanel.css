@@ -64,14 +64,14 @@ ul {
     list-style: none;
     display: flex;
     gap: 5px;
-    background-color: white;
+    background-color: linear-gradient(135deg, #0f4c35, #1a6b5a);
     padding: 10px 30px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.07);
 }
  
 ul li a {
     text-decoration: none;
-    color: #555;
+    color: white;
     font-size: 13px;
     font-weight: 500;
     padding: 6px 14px;
@@ -101,4 +101,106 @@ ul li a:hover {
     font-size: 13px;
     color: #999;
     margin-bottom: 22px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+ 
+.user-table thead {
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+}
+ 
+.user-table thead th {
+    padding: 13px 15px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+ 
+.user-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.15s;
+}
+ 
+.user-table tbody tr:hover {
+    background-color: #f7faf9;
+}
+ 
+.user-table tbody td {
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #444;
+}
+
+.badge-active {
+    background-color: #e8f7ef;
+    color: #1e8449;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+ 
+.badge-inactive {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+ 
+.badge-role {
+    background-color: #e6f4f1;
+    color: #1a6b5a;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.btn-on {
+    background-color: #e8f7ef;
+    color: #1e8449;
+    border: 1.5px solid #1e8449;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+}
+ 
+.btn-on:hover {
+    background-color: #1e8449;
+    color: white;
+}
+
+.btn-off {
+    background-color: #fdecea;
+    color: #c0392b;
+    border: 1.5px solid #c0392b;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s;
+}
+ 
+.btn-off:hover {
+    background-color: #c0392b;
+    color: white;
 }
