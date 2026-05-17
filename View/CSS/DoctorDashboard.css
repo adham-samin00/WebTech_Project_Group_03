@@ -42,3 +42,14 @@ body {
     color: rgba(255,255,255,0.85);
     font-size: 13px;
 }
+
+.logout-btn {
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+}
