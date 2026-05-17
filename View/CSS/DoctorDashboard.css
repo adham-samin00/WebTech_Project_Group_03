@@ -327,3 +327,37 @@ body {
     border-bottom: none;
     margin-bottom: 4px;
 }
+
+.popup-row span:first-child {
+    color: #999;
+    font-weight: 600;
+}
+
+.popup-row span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
+.close-popup {
+    margin-top: 18px;
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity 0.2s;
+}
+
+.close-popup:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+    .week-grid { font-size: 10px; }
+    .action-btns { flex-direction: column; }
+}
