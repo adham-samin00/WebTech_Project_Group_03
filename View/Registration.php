@@ -9,7 +9,7 @@ include "../Controller/RegistrationController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - MediBook</title>
-    <link rel="stylesheet" href="Registration.css">
+    <link rel="stylesheet" href="CSS/Registration.css">
     <script src="../Controller/JS/CheckUserName.js"></script>
 </head>
 <body>

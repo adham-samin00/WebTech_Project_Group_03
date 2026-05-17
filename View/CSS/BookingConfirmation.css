@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f4c35 0%, #1a6b5a 50%, #2d9b7f 100%);
+    min-height: 100vh;
+    color: #333;
+}
+.topnav {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.sitename {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.sitename span { 
+    color: #e8a838; 
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+}
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 7px 14px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+}
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav-right p {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+}
+.logout-btn {
+    background-color: transparent;
+    color: white;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+.logout-btn:hover {
+    background-color: white;
+    color: #1a6b5a;
+}
+.main-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: calc(100vh - 60px);
+}
+.confirm-box {
+    background-color: white;
+    border-radius: 16px;
+    padding: 40px 35px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.confirm-box h2 {
+    color: #1a6b5a;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.confirm-box p {
+    color: #999;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+.appt-id {
+    display: inline-block;
+    background: linear-gradient(135deg, #e6f4f1, #c8e6df);
+    color: #1a6b5a;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 18px;
+    border-radius: 20px;
+    margin-bottom: 22px;
+    border: 1px solid #b2d8cf;
+}
+.confirm-details {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.confirm-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+.confirm-row:last-child {
+    border-bottom: none;
+}
+.confirm-row span:first-child {
+    color: #999;
+    font-weight: 600;
+}
+.confirm-row span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+.status-tag {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.tag-pending {
+    background-color: #fff3cd; color: #856404;
+ }
+.confirm-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.green-btn {
+    background: linear-gradient(135deg, #1a6b5a, #2d9b7f);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+.green-btn:hover {
+    opacity: 0.9;
+}
+.grey-btn {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.grey-btn:hover {
+    background-color: #e0e0e0;
+}
+@media (max-width: 500px) {
+    .confirm-btns { flex-direction: column; }
+    .confirm-box { padding: 28px 20px; }
+}
+
