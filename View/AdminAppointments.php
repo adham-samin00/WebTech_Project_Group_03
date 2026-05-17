@@ -7,6 +7,7 @@ include "../Controller/AdminAppointmentsController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointments - MediBook Admin</title>
+    <link rel="stylesheet" href="CSS/AdminAppointments.css">
     <script src="../Controller/JS/AdminUpdateStatus.js"></script>
 </head>
 <body>

@@ -32,11 +32,19 @@
         "role": "patient"
     },
     {
+<<<<<<< HEAD
+        "name": "Nahian",
+        "email": "nahian@gmail.com",
+        "dob": "2026-05-15",
+        "blood-group": "A+",
+        "phone": "01769696969",
+=======
         "name": "Shafi",
         "email": "ss@gmail.com",
         "dob": "2026-05-22",
         "blood-group": "B+",
         "phone": "01300834752",
+>>>>>>> 3cb8b8ce3adf80edbdb4363ba6504cadcf70478e
         "role": "patient"
     },
 
