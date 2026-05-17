@@ -30,5 +30,13 @@
         "blood-group": "O+",
         "phone": "01234567891",
         "role": "patient"
+    },
+    {
+        "name": "Nahian",
+        "email": "nahian@gmail.com",
+        "dob": "2026-05-15",
+        "blood-group": "A+",
+        "phone": "01769696969",
+        "role": "patient"
     }
 ]
