@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             }
         else
             {
-                //echo json_encode(["ok" => false, "message" => "Update failed"]);
+                echo json_encode(["ok" => false, "message" => "Update failed"]);
             }
     }
 else
