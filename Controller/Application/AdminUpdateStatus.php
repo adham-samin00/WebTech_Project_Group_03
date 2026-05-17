@@ -1,7 +1,6 @@
 <?php
-
-include "../../Model/UpdateStatusByAdminDb.php";
 session_start();
+include "../../Model/UpdateStatusByAdminDb.php";
 
 $isLoggedIn = $_SESSION["loggedIn"] ?? false;
 
