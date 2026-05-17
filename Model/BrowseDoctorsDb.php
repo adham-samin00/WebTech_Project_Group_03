@@ -18,7 +18,7 @@ function getAllSpecializations()
         $result = $connection->query($sql);
         return $result;
     }
-    function getDoctorsBySpecialization($connection, $specialization_id)
+    function getDoctorsBySpecialization( $specialization_id)
     {
         $database   = new db();
         $connection = $database->connection();

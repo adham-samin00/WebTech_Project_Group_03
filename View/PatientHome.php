@@ -8,7 +8,7 @@ include "../Controller/ProfileController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile - MediBook</title>
-    <!-- <link rel="stylesheet" href="PatientHome.css">   -->
+    <link rel="stylesheet" href="CSS/PatientHome.css">  
 </head>
 
 <body>

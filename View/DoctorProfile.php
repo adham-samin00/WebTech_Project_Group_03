@@ -7,6 +7,7 @@ include "../Controller/DoctorProfileController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($doctor["name"]); ?> - MediBook</title>
+     <link rel="stylesheet" href="../View/CSS/DoctorProfile.css">
     <script src="../Controller/JS/LoadSlots.js"></script>
 </head>
 <body>
@@ -131,14 +132,6 @@ LoadSlots = function(dateStr, btn)
     document.getElementById("show-date").value = btn.textContent.trim();
 };
 
-// function checkBeforeBook() 
-// {
-//     let date = document.getElementById("selected_date").value;
-//     let time = document.getElementById("selected_time").value;
-//     if (!date) { alert("Please select a date first."); return false; }
-//     if (!time) { alert("Please select a time slot."); return false; }
-//     return true;
-// }
 </script>
 
 </body>
