@@ -215,3 +215,27 @@ body {
     font-weight: 600;
     border: 1px solid rgba(255,255,255,0.1);
 }
+
+.week-grid td {
+    border: 1px solid #f0f0f0;
+    padding: 5px 6px;
+    font-size: 11px;
+    color: #555;
+    height: 38px;
+    vertical-align: middle;
+    width: 130px;
+}
+
+.week-grid .time-col {
+    background-color: #f7faf9;
+    color: #1a6b5a;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    width: 55px;
+    border-right: 2px solid #e6f4f1;
+}
+
+.week-grid tbody tr:hover {
+    background-color: #f9f9f9;
+}
