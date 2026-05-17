@@ -15,6 +15,13 @@
     $edit_id = intval($_GET["id"] ?? 0);
     $datafile = "../JSON/DoctorInfo.json";
     $weekdays = ["Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    $post_action      = $_POST["action"] ?? "";
+    $name             ="";
+    $email            ="";
+    $password         ="";
+    $specialization_id ="";
+    $bio              = "";
+    $consultation_fee ="";
     if($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $post_action      = $_POST["action"] ?? "";
