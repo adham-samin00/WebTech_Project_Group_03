@@ -37,3 +37,8 @@ body {
     align-items: center;
     gap: 16px;
 }
+
+.nav-right p {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+}
