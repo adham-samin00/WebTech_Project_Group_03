@@ -60,11 +60,11 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Dr. Full Name" required>
+                            <input type="text" id="name" name="name" value = "<?php echo htmlspecialchars($name); ?>" placeholder="Dr. Full Name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="doctor@gmail.com" required>
+                            <input type="email" id="email" name="email" value = "<?php echo htmlspecialchars($email); ?>" placeholder="doctor@gmail.com" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -86,13 +86,12 @@
                     </div>
                     <div class="form-group">
                         <label for="bio">Bio</label>
-                        <textarea id="bio" name="bio" placeholder="Brief description of the doctor's background and expertise..."></textarea>
+                        <textarea id="bio" name="bio" value = "<?php echo htmlspecialchars($bio); ?>" placeholder="Brief description of the doctor's background and expertise..."></textarea>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
                             <label for="consultation_fee">Consultation Fee (BDT)</label>
-                            <input type="number" id="consultation_fee" name="consultation_fee"
-                                placeholder="e.g. 800" min="1" step="0.01" required>
+                            <input type="number" id="consultation_fee" name="consultation_fee"value = "<?php echo htmlspecialchars($consultation_fee); ?>" placeholder="e.g. 800" min="1" step="0.01" required>
                         </div>
                         <div class="form-group">
                             <label for="photo">Profile Photo (JPEG/PNG, max 2MB)</label>
