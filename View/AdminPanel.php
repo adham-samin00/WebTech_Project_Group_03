@@ -8,7 +8,7 @@ include "../Controller/AdminController.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - MediBook</title>
-    <link rel="stylesheet" href="AdminPanel.css">
+    <link rel="stylesheet" href="CSS/AdminPanel.css">
     <script src="../Controller/JS/ToggleActive.js"></script>
 </head>
 

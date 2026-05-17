@@ -43,20 +43,22 @@
         $msg  = $msgs[$_GET["success"]] ?? "";
         if ($msg) echo "<div class='alert alert-success'>$msg</div>";
     } ?>
-
+    <?php if (!empty($error)) { ?>
+        <div class="error-alert"><?php echo htmlspecialchars($error); ?></div>
+    <?php } ?>
     <?php if (isset($_GET["error"])) {
         $errorMsgs = ["has_doctors" => "Cannot delete: doctors are assigned to this specialization."];
         $errMsg = $errorMsgs[$_GET["error"]] ?? "";
         if ($errMsg) echo "<div class='error-alert'>$errMsg</div>";
-    } ?>
+    } ?> 
     <?php if($action == "add"){?>
-        <div class = "add_form">
+        <div class = "add_form">error-aler
             <p class ="form-title">Add New Specialization</p>
             <form method = "post" action="">
                 <input type="hidden" name = "action" value = "create">
                 <div class="form-group">
                     <label for="name">Specialization Name</label>
-                    <input type="text" id = "name" name = "name" placeholder = "e.g. Cardiology" required>
+                    <input type="text" id = "name" name = "name" value = "<?php echo htmlspecialchars($name); ?>" placeholder = "e.g. Cardiology" required>
                 </div>
                 <div class = "form-actions">
                     <input type="submit" class="btn-add" value ="Save">

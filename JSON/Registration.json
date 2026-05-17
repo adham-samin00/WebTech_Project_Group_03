@@ -46,5 +46,13 @@
         "phone": "01300834752",
 >>>>>>> 3cb8b8ce3adf80edbdb4363ba6504cadcf70478e
         "role": "patient"
+    },
+    {
+        "name": "tanvir",
+        "email": "a@gmail.com",
+        "dob": "2026-05-07",
+        "blood-group": "A-",
+        "phone": "01300834752",
+        "role": "patient"
     }
 ]
