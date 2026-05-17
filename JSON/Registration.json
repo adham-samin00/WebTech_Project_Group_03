@@ -38,5 +38,14 @@
         "blood-group": "B+",
         "phone": "01300834752",
         "role": "patient"
+    },
+
+    {
+        "name": "srijon",
+        "email": "srijon.dutta1@gmail.com",
+        "dob": "2026-05-01",
+        "blood-group": "A+",
+        "phone": "01998789878",
+        "role": "patient"
     }
 ]
