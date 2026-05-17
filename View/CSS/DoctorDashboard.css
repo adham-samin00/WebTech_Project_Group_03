@@ -31,3 +31,9 @@ body {
 .sitename span {
     color: #e8a838;
 }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
