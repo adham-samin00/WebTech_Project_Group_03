@@ -267,3 +267,33 @@ body {
     color: #1e8449;
     border-left-color: #1e8449;
 }
+
+.grid-block.block-cancelled {
+    background-color: #f0f0f0;
+    color: #aaa;
+    border-left-color: #ccc;
+}
+
+.grid-block.block-noshow {
+    background-color: #fdecea;
+    color: #c0392b;
+    border-left-color: #c0392b;
+}
+
+/* ---- detail popup ---- */
+.detail-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.45);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-popup.show {
+    display: flex;
+}
