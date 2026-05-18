@@ -52,7 +52,7 @@
         if ($errMsg) echo "<div class='error-alert'>$errMsg</div>";
     } ?> 
     <?php if($action == "add"){?>
-        <div class = "add_form">error-aler
+        <div class = "add_form">
             <p class ="form-title">Add New Specialization</p>
             <form method = "post" action="">
                 <input type="hidden" name = "action" value = "create">
